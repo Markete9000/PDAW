@@ -24,8 +24,6 @@
         </div>
     </header>
 
-    <h1></h1>
-
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
 </html>
