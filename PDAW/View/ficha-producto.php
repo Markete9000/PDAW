@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../View/css/tienda.css">
     <link rel="stylesheet" href="../View/css/principal.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../View/css/ficha-producto.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
@@ -26,6 +25,21 @@
         </div>
     </header>
 
+    <div class="contenedor">
+        
+        <div class="producto">
+            
+            <div class="caja-imagen">
+                <img class="imagen" src="<?=$producto->getImagen()?>" alt="">
+            </div>
+
+            <div class="caja-informacion">
+                informacion
+            </div>
+
+        </div>
+
+    </div>
 
     <?php
         echo $producto->getNombre(), " ", $producto->getCodigo(), " ", $producto->getDescripcion(), " ", $producto->getPrecio(), " ", $producto->getStock(), " ", $producto->getImagen(), " ", $producto->getTipo();

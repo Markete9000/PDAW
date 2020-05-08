@@ -1,0 +1,36 @@
+.body{
+    background: #EBECED;
+}
+
+.contenedor{
+    background: lightcoral;
+    text-align: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.producto{
+    background: lightgray;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    
+}
+
+.caja-imagen{
+    width: 35%;
+    background: lightblue;
+    
+}
+
+.caja-informacion{
+    width: 65%;
+    background: lightgreen;
+    
+}
+
+.imagen{
+    width: 100%;
+    height: 100%;
+}

@@ -8,7 +8,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>  
-<body>
+<body class="body">
 
 	<header class="cabecera">
         <div class="inner-width">
@@ -24,9 +24,13 @@
         </div>
     </header>
 
-    <form action="../Controller/formProducto.php">
-        <input type="submit" value="Añadir producto">
-    </form>
+    <div class="contenedor">
+        
+        <form action="../Controller/formProducto.php">
+            <input type="submit" value="Añadir producto">
+        </form>
+
+    </div>
 
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
