@@ -34,16 +34,28 @@
             </div>
 
             <div class="caja-informacion">
-                informacion
+                <div class="titulo">
+                    <?php echo $producto->getNombre() ?>
+                </div>
+                <div class="descripcion">
+                    <?php echo $producto->getDescripcion() ?>
+                </div>
+                <div class="compra">
+                    <div class="precio">
+                        <?php echo $producto->getPrecio() ?>€
+                    </div>
+                    <div class="boton">
+                        <form action="../Controller/añadir_carrito.php" method="post">
+                            <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
+                            <i class="fas fa-shopping-cart"></i>
+                        </form>
+                    </div>
+                </div>
             </div>
 
         </div>
 
     </div>
-
-    <?php
-        echo $producto->getNombre(), " ", $producto->getCodigo(), " ", $producto->getDescripcion(), " ", $producto->getPrecio(), " ", $producto->getStock(), " ", $producto->getImagen(), " ", $producto->getTipo();
-    ?>
 
 
 
