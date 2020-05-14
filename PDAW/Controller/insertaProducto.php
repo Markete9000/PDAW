@@ -3,7 +3,7 @@
 
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
-    $precio = $_POST['precio'];
+    $precio = doubleval($_POST['precio']);
     $stock = $_POST['stock'];
 
     //Cogemos datos de la imagen seleccionada y la copiamos a la carpeta 

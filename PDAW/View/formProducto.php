@@ -29,7 +29,7 @@
         <div class="contenedor">
 
             <div class="input-contenedor">
-                <input class="formProduct" type="text" name="nombre" placeholder="Nombre">  
+                <input class="formProduct" type="text" name="nombre" placeholder="Nombre" maxlength="90">  
             </div>
             
             <div class="input-contenedor">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="input-contenedor">
-                <input class="formProduct" type="number" name="precio" placeholder="Precio">
+                <input class="formProduct" type="text" name="precio" placeholder="Precio">
             </div>
 
             <div class="input-contenedor">

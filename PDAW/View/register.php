@@ -42,32 +42,32 @@
         
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Nombre Completo" name="nombre" required>
+                <input type="text" placeholder="Nombre Completo" name="nombre" maxlength="50" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-tag icon"></i>
-                <input type="text" placeholder="Usuario" name="usuario" required>
+                <input type="text" placeholder="Usuario" name="usuario"  maxlength="20" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
-                <input type="password" placeholder="Contraseña" name="contraseña" required>
+                <input type="password" placeholder="Contraseña" maxlength="20" name="contraseña" required>
             </div>
                 
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
-                <input type="email" placeholder="Correo Electrónico" name="email" required>
+                <input type="email" placeholder="Correo Electrónico" maxlength="40" name="email" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-home icon"></i>
-                <input type="text" placeholder="Dirección" name="direccion" required>
+                <input type="text" placeholder="Dirección" maxlength="40" name="direccion" required>
             </div>
 
             <div class="input-contenedor">
                 <i class="fas fa-mobile icon"></i>
-                <input type="tel" placeholder="Teléfono" name="telefono" required>
+                <input type="tel" placeholder="Teléfono" name="telefono" maxlength="9" minlength="9" required>
             </div>
 
             <ul class="ul">
