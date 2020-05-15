@@ -65,9 +65,11 @@
             foreach ($data['productos'] as $producto) {
                 
                 echo '<div class="caja-imagen">';
+
                     echo '<img class="imagen" src="'.$producto->getImagen().'" alt="">';
                     echo '<h4 class="titulo">'.$producto->getNombre().'</h4>';
                     echo '<h3 class="precio">'.$producto->getPrecio().'€</h3>';
+
                     echo '<div class="botones">';
                         echo '<form action="../Controller/ficha-producto.php" method="post">';
                             echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
@@ -78,6 +80,7 @@
                             echo '<input class="añadir" type="submit" value="Comprar">';
                         echo '</form>';
                     echo '</div>';
+                    
                 echo '</div>';
 
             }
@@ -87,6 +90,8 @@
 
     </div>
 
-<script type="text/javascript" src="../View/JS/principal.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="../View/JS/tienda.js"></script>
+    <script src="../View/JS/principal.js"></script>
 </body>
 </html>

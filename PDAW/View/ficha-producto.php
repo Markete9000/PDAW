@@ -24,13 +24,17 @@
             </div>
 
             <div class="caja-informacion">
+
                 <div class="titulo">
                     <?php echo $producto->getNombre() ?>
                 </div>
+
                 <div class="descripcion">
                     <?php echo $producto->getDescripcion() ?>
                 </div>
+
                 <div class="compra">
+
                     <div class="precio">
                         <?php echo $producto->getPrecio() ?>€
                     </div>
@@ -40,7 +44,9 @@
                             <input class="añadir" type="submit" value="Comprar">
                         </form>
                     </div>
+                    
                 </div>
+
             </div>
 
         </div>

@@ -25,14 +25,15 @@
 .contenedor-menu{
     width: 15%;  /* 20% */
     min-width: 170px;
-    height: 145px;
-    background: #46505f;
+    height: auto /*575px*/;
+    background: #EBECED /*#46505f*/;
     /* margin: 50px; */
     display: inline-block;
 }
 
 .contenedor-menu .menu{
     width: 100%;
+    background: #46505f;
 }
 
 .contenedor-menu ul{
@@ -117,6 +118,7 @@ a{
 .titulo{
     font-weight: normal;
     color: #938888;
+    height: 30px;
     margin-top: 10px;
     text-align: center;
     font-size: 15px;

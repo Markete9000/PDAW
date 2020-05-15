@@ -12,6 +12,7 @@
 .producto{
     background: white;
     width: 60%;
+    height: auto;
     margin: auto;
     display: flex;
     min-width: 400px;
