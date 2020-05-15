@@ -2,24 +2,97 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .body{
     background: #EBECED;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    line-height: 18px; /* Opcional */
 }
 
 .contenedor{
     /* background: #EBECED; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
+
+/* Menú */
+.contenedor-menu{
+    width: 15%;  /* 20% */
+    min-width: 170px;
+    height: 145px;
+    background: #46505f;
+    /* margin: 50px; */
+    display: inline-block;
+}
+
+.contenedor-menu .menu{
+    width: 100%;
+}
+
+.contenedor-menu ul{
+    list-style: none;
+}
+
+.contenedor-menu .menu li a{
+    color: #ddd;
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 0.2px solid white;
+}
+
+.contenedor-menu .menu li a:hover{
+    background: #5b687a;
+}
+
+.contenedor-menu .menu .icono{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.contenedor-menu .menu .icono.derecha{
+    float: right;
+    margin-left: 10px;
+}
+
+.contenedor-menu .menu ul{
+    display: none;
+}
+
+.contenedor-menu .menu ul li a{
+    background: #738399;
+}
+
+a{
+    color: #ddd;
+    text-align: none;
+}
+
+
+/* Elementos del botón del menú */
+.btn-menu{
+    display: block;
+    padding: 20px;
+    background: #0d2c44;
+}
+
+.btn-menu .icono{
+    float: right;
+}
+
+
+
+
+/* Productos */
 .caja-imagen{
     width: 200px;
     height: 350px;
+    margin: 2px;
     background: rgb(255, 255, 255);
 }
 
@@ -36,8 +109,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 63%;
-    margin-top: 30px;
+    width: 85%;
+    padding-top: 30px;
     /* background: lightblue; */
 }
 
