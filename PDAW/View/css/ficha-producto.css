@@ -84,3 +84,26 @@
 .precio::first-letter{
     font-size: 45px;
 }
+
+.añadir{
+    width: 90px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #FF6000;
+    background: #FF6000;
+    color: white;
+    transition-duration: 400ms;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.añadir:hover{
+    font-weight: bold;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    border: 1px solid #FF6000;
+    background: white;
+    color: #FF6000;
+    cursor: pointer;
+    font-size: 17px;
+}

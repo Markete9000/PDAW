@@ -36,10 +36,9 @@
                     echo '</form>';
                     echo '<form action="../Controller/añadir_carrito.php" method="post">';
                         echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
-                        echo '<input class="añadir" type="submit" value="+">';
+                        echo '<input class="añadir" type="submit" value="Comprar">';
                     echo '</form>';
                 echo '</div>';
-            
             echo '</div>';
 
         }
