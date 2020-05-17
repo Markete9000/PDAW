@@ -10,14 +10,16 @@ class Usuario{
     private $email;
     private $direccion;
     private $telefono;
+    private $tipo;
 
-    public function __construct($nombre="", $usuario="", $contraseña="", $email="", $direccion="", $telefono=""){
+    public function __construct($nombre="", $usuario="", $contraseña="", $email="", $direccion="", $telefono="", $tipo="usuario"){
         $this->nombre = $nombre;
         $this->usuario = $usuario;
         $this->contraseña = $contraseña;
         $this->email = $email;
         $this->direccion = $direccion;
         $this->telefono = $telefono;
+        $this->tipo = $tipo;
     }
 
     public function getNombre(){
@@ -62,9 +64,16 @@ class Usuario{
         $this->telefono = $telefono;
     }
 
+    public function getTipo(){
+        return $this->tipo;
+    }
+    public function setTipo($tipo){
+        $this->tipo = $tipo;
+    }
+
     public function insert(){
         $conexion = ayoDB::connectDB();
-        $insercion = "INSERT INTO usuario (nombre, usuario, contraseña, email, direccion, telefono) VALUES ('".$this->nombre."', '".$this->usuario."', '".$this->contraseña."', '".$this->email."', '".$this->direccion."', '".$this->telefono."')";
+        $insercion = "INSERT INTO usuario (nombre, usuario, contraseña, email, direccion, telefono, tipo) VALUES ('".$this->nombre."', '".$this->usuario."', '".$this->contraseña."', '".$this->email."', '".$this->direccion."', '".$this->telefono."', '".$this->tipo."')";
         $conexion->exec($insercion);
     }
 
@@ -76,7 +85,7 @@ class Usuario{
 
     public function update($usuario){
         $conexion = ayoDB::connectDB();
-        $modificado = "UPDATE usuario SET nombre='".$this->nombre."', usuario='".$this->usuario."', contraseña='".$this->contraseña."', email='".$this->email."', direccion='".$this->direccion."', telefono='".$this->telefono."', WHERE usuario='".$usuario."'";
+        $modificado = "UPDATE usuario SET nombre='".$this->nombre."', usuario='".$this->usuario."', contraseña='".$this->contraseña."', email='".$this->email."', direccion='".$this->direccion."', telefono='".$this->telefono."', tipo='".$this->tipo."' WHERE usuario='".$usuario."'";
         $conexion->exec($modificado);
     }
 
@@ -89,7 +98,7 @@ class Usuario{
         }
         if ($consulta->rowCount() > 0) {
             while ($usuarios = $consulta->fetchObject()) {
-                $usuario = new Usuario($usuarios->nombre, $usuarios->usuario, $usuarios->contraseña, $usuarios->email, $usuarios->direccion, $usuarios->telefono);
+                $usuario = new Usuario($usuarios->nombre, $usuarios->usuario, $usuarios->contraseña, $usuarios->email, $usuarios->direccion, $usuarios->telefono, $usuarios->tipo);
             }
             return $usuario;
         }else{
@@ -102,7 +111,7 @@ class Usuario{
         $consulta = $conexion->query("SELECT * FROM usuario");
         $data['usuarios'] = [];
         while ($usuarios = $consulta->fetchObject()) {
-            $data['usuarios'][] = new Usuario($usuarios->nombre, $usuarios->usuario, $usuarios->contraseña, $usuarios->email, $usuarios->direccion, $usuarios->telefono);
+            $data['usuarios'][] = new Usuario($usuarios->nombre, $usuarios->usuario, $usuarios->contraseña, $usuarios->email, $usuarios->direccion, $usuarios->telefono, $usuarios->tipo);
         }
         return $data['usuarios'];
     }

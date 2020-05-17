@@ -26,33 +26,32 @@
 
             <ul class="menu">
 
-                <li><a href="#">Componentes <i class="icono derecha fa fa-chevron-down"></i></a>
+                <li><a>Componentes <i class="icono derecha fa fa-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Placas Base</a></li>
-                        <li><a href="#">Procesadores</a></li>
-                        <li><a href="#">Discos Duros</a></li>
-                        <li><a href="#">Tarjetas Gráficas</a></li>
-                        <li><a href="#">Memoria RAM</a></li>
-                        <li><a href="#">Torres</a></li>
-                        <li><a href="#">Ventilación</a></li>
-                        <li><a href="#">Fuente de alimentación</a></li>
-                        <li><a href="#">Discos duros</a></li>
+                        <li><a href="../Controller/tienda.php?producto=placa base">Placas Base</a></li>
+                        <li><a href="../Controller/tienda.php?producto=procesador">Procesadores</a></li>
+                        <li><a href="../Controller/tienda.php?producto=disco duro">Discos Duros</a></li>
+                        <li><a href="../Controller/tienda.php?producto=tarjeta grafica">Tarjetas Gráficas</a></li>
+                        <li><a href="../Controller/tienda.php?producto=memoria ram">Memoria RAM</a></li>
+                        <li><a href="../Controller/tienda.php?producto=torre">Torres</a></li>
+                        <li><a href="../Controller/tienda.php?producto=ventilacion">Ventilación</a></li>
+                        <li><a href="../Controller/tienda.php?producto=fuente de alimentacion">Fuente de alimentación</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#">Periféricos <i class="icono derecha fa fa-chevron-down"></i></a>
+                <li><a>Periféricos <i class="icono derecha fa fa-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Monitores</a></li>
-                        <li><a href="#">Teclados</a></li>
-                        <li><a href="#">Ratones</a></li>
+                        <li><a href="../Controller/tienda.php?producto=monitor">Monitores</a></li>
+                        <li><a href="../Controller/tienda.php?producto=teclado">Teclados</a></li>
+                        <li><a href="../Controller/tienda.php?producto=raton">Ratones</a></li>
                     </ul>
                 </li>
 
-                <li><a href="#">Smartphones <i class="icono derecha fa fa-chevron-down"></i></a>
+                <li><a>Smartphones / Telefonía<i class="icono derecha fa fa-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Samsung</a></li>
-                        <li><a href="#">Iphone</a></li>
-                        <li><a href="#">Xiaomi</a></li>
+                        <li><a href="../Controller/tienda.php?producto=samsung">Smartphones</a></li>
+                        <li><a href="../Controller/tienda.php?producto=iphone">Móviles Básicos</a></li>
+                        <li><a href="../Controller/tienda.php?producto=xiaomi">Móviles para mayores</a></li>
                     </ul>
                 </li>
 

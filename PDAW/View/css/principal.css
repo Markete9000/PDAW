@@ -18,9 +18,11 @@ header{
 }
 
 .inner-width{
-    max-width: 1000px;
+    /* max-width: 1000px; */
     padding: 0 10px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo{
@@ -29,13 +31,14 @@ header{
 }
 
 .logo img{
-    height: 85px;
+    height: 100px;
 }
 
 .navigation-menu{
     float: right;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     min-height: 90px;
 }
 

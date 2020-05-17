@@ -98,6 +98,16 @@ class Producto{
         return $producto;
     }
 
+    public static function getProductosByTipo($tipo){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM producto WHERE tipo='".$tipo."'");
+        $data['productos'] = [];
+        while ($productos = $consulta->fetchObject()) {
+            $data['productos'][] = new Producto($productos->codigo, $productos->nombre, $productos->descripcion, $productos->precio, $productos->stock, $productos->imagen, $productos->tipo);
+        }
+        return $data['productos'];
+    }
+
     public static function existeProducto($codigo){
         $conexion = ayoDB::connectDB();
         $consulta = $conexion->query("SELECT * FROM producto WHERE codigo='".$codigo."'");

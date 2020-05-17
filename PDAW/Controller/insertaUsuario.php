@@ -6,6 +6,9 @@ $usuario2 = Usuario::getUsuarioByUsuario($_POST['usuario'], $_POST['email']);
 if ($usuario2 == false) {
 
     $usuario->insert();
+    session_start();
+    $_SESSION['usuario'] = $usuario->getUsuario();
+    $_SESSION['tipo'] = $usuario->getTipo();
     header("Location: ../Controller/principal.php");
     
 }else{
