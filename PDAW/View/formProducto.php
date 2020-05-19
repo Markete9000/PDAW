@@ -29,28 +29,44 @@
         <div class="contenedor">
 
             <div class="input-contenedor">
-                <input class="formProduct" type="text" name="nombre" placeholder="Nombre" maxlength="90">  
+                <input type="text" name="nombre" placeholder="Nombre" maxlength="90">  
             </div>
             
             <div class="input-contenedor">
-                <input class="formProduct" type="text" name="descripcion" placeholder="Descripción">
+                <input type="text" name="descripcion" placeholder="Descripción">
             </div>
 
             <div class="input-contenedor">
-                <input class="formProduct" type="text" name="precio" placeholder="Precio">
+                <input type="text" name="precio" placeholder="Precio">
             </div>
 
             <div class="input-contenedor">
-                <input class="formProduct" type="number" name="stock" placeholder="Stock">
+                <input type="number" name="stock" placeholder="Stock">
             </div>
 
             <h5>Imagen de producto</h5>
             <div class="input-contenedor input-imagen">
-                <input type="file" class="formProduct" name="imagen" id="imagen">
+                <input type="file" class="archivo" name="imagen" id="imagen">
             </div>
 
+            <h5>Tipo de producto</h5>
             <div class="input-contenedor">
-                <input class="formProduct" type="text" name="tipo" placeholder="Tipo">
+                <select name="tipo" class="select">
+                    <option value="placa base">Placa Base</option>
+                    <option value="procesador">Procesador</option>
+                    <option value="disco duro">Disco Duro</option>
+                    <option value="tarjeta grafica">Tarjeta Gráfica</option>
+                    <option value="memoria ram">Memoria RAM</option>
+                    <option value="torre">Torre</option>
+                    <option value="ventilacion">Ventilación</option>
+                    <option value="fuente de alimentacion">Fuente de Alimentación</option>
+                    <option value="monitore">Monitor</option>
+                    <option value="teclado">Teclado</option>
+                    <option value="raton">Ratón</option>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="movil basico">Móvil Básico</option>
+                    <option value="movil mayores">Móvil para Mayores</option>
+                </select>
             </div>
 
             <input type="submit" value="Añadir" class="button">

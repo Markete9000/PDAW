@@ -32,10 +32,10 @@
                         <li><a href="../Controller/tienda.php?producto=procesador">Procesadores</a></li>
                         <li><a href="../Controller/tienda.php?producto=disco duro">Discos Duros</a></li>
                         <li><a href="../Controller/tienda.php?producto=tarjeta grafica">Tarjetas Gráficas</a></li>
-                        <li><a href="../Controller/tienda.php?producto=memoria ram">Memoria RAM</a></li>
+                        <li><a href="../Controller/tienda.php?producto=memoria ram">Memorias RAM</a></li>
                         <li><a href="../Controller/tienda.php?producto=torre">Torres</a></li>
                         <li><a href="../Controller/tienda.php?producto=ventilacion">Ventilación</a></li>
-                        <li><a href="../Controller/tienda.php?producto=fuente de alimentacion">Fuente de alimentación</a></li>
+                        <li><a href="../Controller/tienda.php?producto=fuente de alimentacion">Fuentes de alimentación</a></li>
                     </ul>
                 </li>
 
@@ -49,9 +49,9 @@
 
                 <li><a>Smartphones / Telefonía<i class="icono derecha fa fa-chevron-down"></i></a>
                     <ul>
-                        <li><a href="../Controller/tienda.php?producto=samsung">Smartphones</a></li>
-                        <li><a href="../Controller/tienda.php?producto=iphone">Móviles Básicos</a></li>
-                        <li><a href="../Controller/tienda.php?producto=xiaomi">Móviles para mayores</a></li>
+                        <li><a href="../Controller/tienda.php?producto=smartphone">Smartphones</a></li>
+                        <li><a href="../Controller/tienda.php?producto=movil basico">Móviles Básicos</a></li>
+                        <li><a href="../Controller/tienda.php?producto=movil mayores">Móviles para mayores</a></li>
                     </ul>
                 </li>
 
