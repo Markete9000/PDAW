@@ -52,20 +52,20 @@
             <h5>Tipo de producto</h5>
             <div class="input-contenedor" id="ejemplo">
                 <select name="tipo" class="select">
-                    <option value="placa base">Placa Base</option>
-                    <option value="procesador">Procesador</option>
-                    <option value="disco duro">Disco Duro</option>
-                    <option value="tarjeta grafica">Tarjeta Gráfica</option>
-                    <option value="memoria ram">Memoria RAM</option>
-                    <option value="torre">Torre</option>
-                    <option value="ventilacion">Ventilación</option>
-                    <option value="fuente de alimentacion">Fuente de Alimentación</option>
-                    <option value="monitore">Monitor</option>
-                    <option value="teclado">Teclado</option>
-                    <option value="raton">Ratón</option>
-                    <option value="smartphone">Smartphone</option>
-                    <option value="movil basico">Móvil Básico</option>
-                    <option value="movil mayores">Móvil para Mayores</option>
+                    <option value="Placa base">Placa Base</option>
+                    <option value="Procesador">Procesador</option>
+                    <option value="Disco duro">Disco Duro</option>
+                    <option value="Tarjeta grafica">Tarjeta Gráfica</option>
+                    <option value="Memoria ram">Memoria RAM</option>
+                    <option value="Torre">Torre</option>
+                    <option value="Ventilacion">Ventilación</option>
+                    <option value="Fuente de alimentacion">Fuente de Alimentación</option>
+                    <option value="Monitor">Monitor</option>
+                    <option value="Teclado">Teclado</option>
+                    <option value="Raton">Ratón</option>
+                    <option value="Smartphone">Smartphone</option>
+                    <option value="Movil basico">Móvil Básico</option>
+                    <option value="Movil mayores">Móvil para Mayores</option>
                 </select>
             </div>
 

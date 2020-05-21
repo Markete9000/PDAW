@@ -24,10 +24,12 @@ td{
 }
 
 .td{
+    /* background: rgb(181, 224, 238); */
     background: rgb(198, 200, 201);
 }
 
 .td:hover{
+    /* background: rgb(186, 230, 243); */
     background: rgb(208, 211, 212);
 }
 
@@ -72,6 +74,7 @@ td{
     border: 1px solid orangered;
     background: orangered;
     color: white;
+    font-size: 14px;    
     transition-duration: 200ms;
 }
 
@@ -92,6 +95,7 @@ td{
     border: 1px solid rgb(241, 20, 20);
     background: rgb(241, 20, 20);
     color: white;
+    font-size: 14px;
     transition-duration: 200ms;
 }
 
