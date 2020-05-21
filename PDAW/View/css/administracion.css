@@ -1,0 +1,57 @@
+.body{
+    background: #EBECED;
+}
+
+.contenedor{
+    height: 300px;
+    display: flex;
+    margin-top: 80px;
+    justify-content: space-around;
+}
+
+.productos, .usuarios{
+    height: 100%;
+    width: 40%;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid rgb(181, 183, 185);
+}
+
+.titulo{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2f3640;
+    border-radius: 15px;
+}
+
+.h2{
+    font-weight: bold;
+    font-size: 35px;
+    color: #fff;
+}
+
+.gestion{
+    width: 150px;
+    height: 50px;
+    margin-top: 10%;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 204, 28);
+    background: rgb(28, 204, 28);
+    color: white;
+    transition-duration: 200ms;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gestion:hover{
+    font-weight: bold;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    border: 1px solid rgb(28, 204, 28);
+    background: white;
+    color: rgb(28, 204, 28);
+    font-size: 23px;
+}

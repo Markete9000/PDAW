@@ -50,7 +50,7 @@
             </div>
 
             <h5>Tipo de producto</h5>
-            <div class="input-contenedor">
+            <div class="input-contenedor" id="ejemplo">
                 <select name="tipo" class="select">
                     <option value="placa base">Placa Base</option>
                     <option value="procesador">Procesador</option>
