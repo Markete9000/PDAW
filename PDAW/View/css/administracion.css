@@ -55,3 +55,22 @@
     color: rgb(28, 204, 28);
     font-size: 23px;
 }
+
+@media screen and (max-width:850px){
+
+    .h2{
+        font-size: 25px;
+    }
+
+    .contenedor{
+        display: block;
+    }
+
+    .productos, .usuarios{
+        height: 60%;
+        width: 40%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+}

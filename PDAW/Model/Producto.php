@@ -128,6 +128,23 @@ class Producto{
         return $data['productos'];
     }
 
+    public static function getProductosWithLimit($limite){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM producto LIMIT ".$limite.",5");
+        $data['productos'] = [];
+        while ($productos = $consulta->fetchObject()) {
+            $data['productos'][] = new Producto($productos->codigo, $productos->nombre, $productos->descripcion, $productos->precio, $productos->stock, $productos->imagen, $productos->tipo);
+        }
+        return $data['productos'];
+    }
+
+    public static function getCantidadDeProductos(){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM producto");
+        $tamaño = $consulta->rowCount();
+        return $tamaño;
+    }
+
 }
 
 ?>

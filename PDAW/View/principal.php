@@ -16,9 +16,7 @@
 
     <div class="contenedor">
         
-        <form action="../Controller/formProducto.php">
-            <input type="submit" value="Añadir producto">
-        </form>
+    
 
     </div>
 

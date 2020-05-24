@@ -40,10 +40,42 @@
                         </td>';
                     echo '</tr>';
                 }
+                echo '<tr><td></td>
+                    <td></td>'
             ?>
-            
-
         </table>
+
+        <table class="tabla">
+            <tr>
+                <td>
+                    <?php
+                        if ($_SESSION['limite'] >= 5) {
+                            echo '<form action="../Controller/gestion_productos.php" method="post">';
+                            echo '<input type="hidden" name="anterior">';
+                            echo '<input class="limite" type="submit" value="Anterior">';
+                            echo '</form>';
+                        }
+                    ?>
+                </td>
+                <td></td>
+                <td>
+                    <?php
+                        if ($_SESSION['limite'] <= $data['cantidad'] - 6) {
+                            echo '<form action="../Controller/gestion_productos.php" method="post">';
+                            echo '<input type="hidden" name="siguiente">';
+                            echo '<input class="limite" type="submit" value="Siguiente">';
+                            echo '</form>';
+                        }
+                    ?>
+                </td>
+            </tr>
+        </table>
+
+        <div class="boton">
+            <form action="../Controller/formProducto.php">
+                <input class="añadir boton" type="submit" value="Insertar Producto">
+            </form>
+        </div>
 
     </div>
 
