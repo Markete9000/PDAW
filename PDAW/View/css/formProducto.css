@@ -113,6 +113,55 @@ p{
     /* color: rgb(105, 103, 103); */
 }
 
+.formularios{
+    display: flex;
+    justify-content: space-around;
+}
+
+.afirmacion{
+    width: 80px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 204, 28);
+    background: rgb(28, 204, 28);
+    color: white;
+    transition-duration: 200ms;
+    font-size: 14px;
+    font-weight: bold;
+    transition-duration: 200ms;
+}
+
+.afirmacion:hover{
+    font-weight: bold;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    border: 1px solid rgb(28, 204, 28);
+    background: white;
+    color: rgb(28, 204, 28);
+    font-size: 16px;
+}
+
+.borrar{
+    width: 80px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgb(241, 20, 20);
+    background: rgb(241, 20, 20);
+    color: white;
+    font-size: 14px;
+    transition-duration: 200ms;
+}
+
+.borrar:hover{
+    font-weight: bold;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    border: 1px solid rgb(241, 20, 20);
+    background: white;
+    font-size: 16px;
+    color: rgb(241, 20, 20);
+}
+
 @media(min-width:768px)
 {
     .formulario{

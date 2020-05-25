@@ -83,9 +83,9 @@ class Producto{
         $conexion->exec($borrado);
     }
 
-    public function update($codigo){
+    public function update(){
         $conexion = ayoDB::connectDB();
-        $modificado = "UPDATE producto SET nombre='".$this->nombre."', descripcion='".$this->descripcion."', precio='".$this->precio."', stock='".$this->stock."', imagen='".$this->imagen."', tipo='".$this->tipo."', WHERE codigo='".$codigo."'";
+        $modificado = "UPDATE producto SET nombre='".$this->nombre."', descripcion='".$this->descripcion."', precio='".$this->precio."', stock='".$this->stock."', tipo='".$this->tipo."' WHERE codigo='".$this->codigo."'";
         $conexion->exec($modificado);
     }
 
@@ -121,6 +121,16 @@ class Producto{
     public static function getProductos(){
         $conexion = ayoDB::connectDB();
         $consulta = $conexion->query("SELECT * FROM producto");
+        $data['productos'] = [];
+        while ($productos = $consulta->fetchObject()) {
+            $data['productos'][] = new Producto($productos->codigo, $productos->nombre, $productos->descripcion, $productos->precio, $productos->stock, $productos->imagen, $productos->tipo);
+        }
+        return $data['productos'];
+    }
+
+    public static function getProductosByFiltro($filtro){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM producto WHERE nombre LIKE '%".$filtro."%' OR codigo LIKE '%".$filtro."%'");
         $data['productos'] = [];
         while ($productos = $consulta->fetchObject()) {
             $data['productos'][] = new Producto($productos->codigo, $productos->nombre, $productos->descripcion, $productos->precio, $productos->stock, $productos->imagen, $productos->tipo);

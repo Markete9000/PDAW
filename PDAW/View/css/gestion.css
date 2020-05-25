@@ -8,11 +8,20 @@
 
 .contenedor{
     width: 100%;
-    display: block;
-    /* display: flex;
+    /* display: block; */
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
+    flex-wrap: wrap ;
     margin-top: 40px;
+}
+
+.caja_tabla{
+    width: 100%;
+}
+
+.primera{
+    margin-top: 20px;
 }
 
 .tabla{
@@ -57,7 +66,7 @@ td{
     border: 1px solid rgb(28, 204, 28);
     background: rgb(28, 204, 28);
     color: white;
-    font-size: 14px;  
+    font-size: 15px;  
     transition-duration: 200ms;
 }
 
@@ -67,7 +76,7 @@ td{
     border-radius: 10px;
     border: 1px solid rgb(28, 204, 28);
     background: white;
-    font-size: 15px;  
+    font-size: 16px;  
     color: rgb(28, 204, 28);
 }
 
@@ -135,4 +144,26 @@ td{
 
 .boton{
     text-align: center;
+}
+
+.formulario{
+    margin: 0;
+}
+
+.filtro{
+    width: 222px;
+    height: 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+.filtro:focus{
+    width: 350px;
+    transition: 500ms;
+}
+
+.filtrar{
+    width: 60px;
 }
