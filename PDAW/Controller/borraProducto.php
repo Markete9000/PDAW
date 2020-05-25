@@ -7,6 +7,7 @@
         header('Location: ../Controller/gestion_productos.php');
     }else{
         $codigo = $_POST['codigo'];
-        header('Location: ../Controller/confirmacionBorrado.php?codigo='.$codigo.'');
+        include '../View/confirmacionBorradoProducto.php';
+        // header('Location: ../Controller/confirmacionBorradoProducto.php?codigo='.$codigo.'');
     }
 ?>

@@ -15,15 +15,6 @@
     <form class="formulario" action="../Controller/modificaProducto.php" method="post">
     
         <h1>Producto a Modificar</h1>
-
-        <?php
-        if (isset($_GET['modificado'])) {
-            echo '<div id="cookies" class="alert alert-info alert-dismissible fade show" role="alert">
-                    <strong>Producto modificado</strong>
-                    </button>
-                </div>';
-        }
-        ?>
         
         <div class="contenedor">
 

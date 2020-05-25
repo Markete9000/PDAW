@@ -106,6 +106,26 @@ class Usuario{
         }
     }
 
+    public static function getUsuariosByFiltro($filtro){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM usuario WHERE nombre LIKE '%".$filtro."%' OR usuario LIKE '%".$filtro."%'");
+        $data['usuarios'] = [];
+        while ($usuarios = $consulta->fetchObject()) {
+            $data['usuarios'][] = new Usuario($usuarios->nombre, $usuarios->usuario, $usuarios->contraseña, $usuarios->email, $usuarios->direccion, $usuarios->telefono, $usuarios->tipo);
+        }
+        return $data['usuarios'];
+    }
+
+    public static function getUsuariosWithLimit($limite){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM usuario LIMIT ".$limite.",5");
+        $data['usuarios'] = [];
+        while ($usuarios = $consulta->fetchObject()) {
+            $data['usuarios'][] = new Usuario($usuarios->nombre, $usuarios->usuario, $usuarios->contraseña, $usuarios->email, $usuarios->direccion, $usuarios->telefono, $usuarios->tipo);
+        }
+        return $data['usuarios'];
+    }
+
     public static function getUsuarios(){
         $conexion = ayoDB::connectDB();
         $consulta = $conexion->query("SELECT * FROM usuario");
@@ -114,6 +134,13 @@ class Usuario{
             $data['usuarios'][] = new Usuario($usuarios->nombre, $usuarios->usuario, $usuarios->contraseña, $usuarios->email, $usuarios->direccion, $usuarios->telefono, $usuarios->tipo);
         }
         return $data['usuarios'];
+    }
+
+    public static function getCantidadDeUsuarios(){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM usuario");
+        $tamaño = $consulta->rowCount();
+        return $tamaño;
     }
 
 }

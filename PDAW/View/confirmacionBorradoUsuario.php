@@ -11,29 +11,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>  
 <body class="body">
-
-    <form class="formulario" action="../Controller/borraProducto.php" method="post">
     
+    <form class="formulario" action="../Controller/borraUsuario.php" method="post">
         <h1>Confirmación de Borrado</h1>
         
         <div class="contenedor">
 
-            <h3>¿Es seguro el borrado del producto?</h3>
+            <h3>¿Es seguro que desea borrar el Usuario?</h3>
 
             <div class="formularios">
-                <form action="../Controller/borraProducto.php" method="post">
+                <form class= action="../Controller/borraUsuario.php" method="post">
                     <input type="hidden" name="confirmacion">
-                    <input type="hidden" name="codigo" value="<?=$codigo?>">
+                    <input type="hidden" name="usuario" value="<?=$usuario?>">
                     <input class="afirmacion" type="submit" value="Si">
                 </form>
 
-                <form action="../Controller/gestion_productos.php" method="post">
+                <form action="../Controller/gestion_usuarios.php" method="post">
                     <input class="borrar" type="submit" value="No">
                 </form>
             </div>
 
         </div>
-
     </form>
 
 </body>
