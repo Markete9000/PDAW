@@ -42,7 +42,7 @@ class Carrito{
         $conexion->exec($modificado);
     }
     
-    public function getCarritoByUsuario($usuario){
+    public static function getCarritoByUsuario($usuario){
         $conexion = ayoDB::connectDB();
         $consulta = $conexion->query("SELECT * FROM carrito WHERE usuario='".$usuario."'");
         while ($carritos = $consulta->fetchObject()) {

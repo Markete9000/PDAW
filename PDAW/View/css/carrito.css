@@ -1,0 +1,95 @@
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carrito{
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+h1{
+    font-size: 37px;
+    background: #2f3640;
+    border-radius: 5px;
+    color: white;
+}
+
+.producto{
+    display: flex;
+    align-items: center;
+    
+}
+
+.pago, .producto{
+    border-top: 2px solid lightgray;
+}
+
+.cajaimagen{
+    width: 20%;
+}
+
+.cajainfo{
+    width: 60%;
+}
+
+.cajabotones{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.imagen{
+    width: 190px;
+    height: 200px;
+}
+
+.añadir{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 204, 28);
+    background: rgb(28, 204, 28);
+    color: white;
+    transition-duration: 200ms;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.añadir:hover{
+    font-weight: bold;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    border: 1px solid rgb(28, 204, 28);
+    background: white;
+    color: rgb(28, 204, 28);
+    font-size: 21px;
+}
+
+.eliminar{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgb(241, 20, 20);
+    background: rgb(241, 20, 20);
+    color: white;
+    font-size: 20px;
+    transition-duration: 200ms;
+    font-weight: bold;
+}
+
+.eliminar:hover{
+    font-weight: bold;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    border: 1px solid rgb(241, 20, 20);
+    background: white;
+    font-size: 21px;
+    color: rgb(241, 20, 20);
+}

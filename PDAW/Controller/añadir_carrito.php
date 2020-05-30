@@ -12,6 +12,7 @@
             $carrito->insert();
         }
     }else{
+        
         $carrito = Carrito::getCarritoByUsuario($_SESSION['usuario']);
 
         // En caso de que no exista el producto en el carrito se añadirá directamente
@@ -45,6 +46,6 @@
             $carrito->update();
         }
 
-        header('Location:' . getenv('HTTP_REFERER'));
     }
+    header('Location:' . getenv('HTTP_REFERER'));
 ?>
