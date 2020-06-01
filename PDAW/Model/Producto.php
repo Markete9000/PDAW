@@ -89,6 +89,15 @@ class Producto{
         $conexion->exec($modificado);
     }
 
+    public function updateStock($cantidad){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("UPDATE producto SET stock=".$cantidad." WHERE codigo='".$this->codigo."'");
+        while ($productos = $consulta->fetchObject()) {
+            $producto = new Producto($productos->codigo, $productos->nombre, $productos->descripcion, $productos->precio , $productos->stock, $productos->imagen, $productos->tipo);
+        }
+        return $producto;
+    }
+
     public static function getProductoByCodigo($codigo){
         $conexion = ayoDB::connectDB();
         $consulta = $conexion->query("SELECT * FROM producto WHERE codigo='".$codigo."'");

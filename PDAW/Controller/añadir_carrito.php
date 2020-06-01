@@ -31,7 +31,13 @@
                 $division = explode('-', $producto);
                 $array[$division[0]] = $division[1];
             }
-            $array[$_POST['codigo']]++;
+            $auxiliar = Producto::getProductoByCodigo($_POST['codigo']);
+            if ($auxiliar->getStock() > $array[$_POST['codigo']]) {
+                $array[$_POST['codigo']]++;
+            }
+            if ($auxiliar->getStock() < $array[$_POST['codigo']]) {
+                $array[$_POST['codigo']] = $auxiliar->getStock();
+            }
             $cadena = "";
             $cont = 0;
             foreach ($array as $codigo => $cantidad) {

@@ -19,49 +19,66 @@
 
         <div class="carrito">
             
-        <h1>Carrito de productos</h1>
+        <h2 class="h2">Carrito de <?=$_SESSION['usuario']?></h2>
 
             <?php
-            
-            foreach ($data['productos'] as $producto) {
-                echo '<div class="producto">';
+            if (isset($data['productos'])) {
 
-                    echo '<div class="cajaimagen">';
-                        echo '<img class="imagen" src="'.$producto->getImagen().'" alt="">';
+                foreach ($data['productos'] as $producto) {
+                    echo '<div class="producto">';
+    
+                        echo '<div class="cajaimagen">';
+                            echo '<img class="imagen" src="'.$producto->getImagen().'" alt="">';
+                        echo '</div>';
+    
+                        echo '<div class="cajainfo">';
+                            echo '<h3>'.$producto->getNombre().'</h3>';
+                        echo '</div>';
+    
+                        echo '<div class="cajabotones">';
+    
+                            echo '<form action="../Controller/eliminar_carrito.php" method="post">';
+                            echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
+                            echo '<input class="eliminar" type="submit" value="-">';
+                            echo '</form>';
+    
+                            echo '<h2>'.$cantidades[$i].'</h2>';
+                        
+                            echo '<form action="../Controller/añadir_carrito.php" method="post">';
+                            echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
+                            echo '<input class="añadir" type="submit" value="+">';
+                            echo '</form>';
+    
+                        echo '</div>';
+    
                     echo '</div>';
+                    $i++;
+                }
 
-                    echo '<div class="cajainfo">';
-                        echo '<h3>'.$producto->getNombre().'</h3>';
-                    echo '</div>';
+            }
 
-                    echo '<div class="cajabotones">';
-
-                        echo '<form action="../Controller/eliminar_carrito.php" method="post">';
-                        echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
-                        echo '<input class="eliminar" type="submit" value="-">';
+            if (isset($totalAPagar)) {
+                echo '<div class="pago">';
+                    echo '<h3 class="h3">Total: &nbsp</h3><h3 class="precio">'.$totalAPagar.'€</h3>';
+                    echo '<div class="final">';
+                        echo '<form action="../Controller/añadir_pedido.php" method="post">';
+                            echo '<input class="añadir pedido" type="submit" value="Realizar pedido">';
                         echo '</form>';
-
-                        echo '<h2>'.$cantidades[$i].'</h2>';
-                    
-                        echo '<form action="../Controller/añadir_carrito.php" method="post">';
-                        echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
-                        echo '<input class="añadir" type="submit" value="+">';
-                        echo '</form>';
-
                     echo '</div>';
-
                 echo '</div>';
-                $i++;
+
+            }else{
+                echo '<div class="vacio">
+                    <h2>Tiene el carrito vacío, ¡¡Vaya a la tienda y añada algo a él!!</h2>
+                    </div>';
             }
             
             ?>
-            <div class="pago">
-                <h3><?=$totalAPagar?></h3>
-            </div>
+            
         </div>
 
     </div>
-
+        
     <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
 </html>

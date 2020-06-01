@@ -12,8 +12,8 @@
     text-align: center;
 }
 
-h1{
-    font-size: 37px;
+.h2{
+    font-size: 35px;
     background: #2f3640;
     border-radius: 5px;
     color: white;
@@ -22,19 +22,26 @@ h1{
 .producto{
     display: flex;
     align-items: center;
-    
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .pago, .producto{
     border-top: 2px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .cajaimagen{
     width: 20%;
+    min-width: 150px;
 }
 
 .cajainfo{
     width: 60%;
+    min-width: 450px;
 }
 
 .cajabotones{
@@ -42,7 +49,7 @@ h1{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+    min-width: 150px;
 }
 
 .imagen{
@@ -72,6 +79,10 @@ h1{
     font-size: 21px;
 }
 
+.pedido{
+    width: 160px;
+}
+
 .eliminar{
     width: 30px;
     height: 30px;
@@ -92,4 +103,40 @@ h1{
     background: white;
     font-size: 21px;
     color: rgb(241, 20, 20);
+}
+
+.añadir:hover, .eliminar:hover, .pedido:hover{
+    cursor: pointer;
+}
+
+.vacio{
+    padding: 60px;
+}
+
+.precio{
+    color: #FF6000;
+    font-size: 35px;
+    font-weight: bold;   
+}
+
+.h3{
+    font-size: 30px;
+}
+
+.final{
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+@media(max-width:800px){
+    .imagen{
+        width: 150px;
+        height: 170px;
+    }
+
+    .cajabotones{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
 }
