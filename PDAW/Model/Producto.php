@@ -26,7 +26,7 @@ class Producto{
         return $this->codigo;
     }
     public function setCodigo($codigo){
-        $this->matricula = $codigo;
+        $this->codigo = $codigo;
     }
 
     public function getNombre(){
@@ -91,11 +91,8 @@ class Producto{
 
     public function updateStock($cantidad){
         $conexion = ayoDB::connectDB();
-        $consulta = $conexion->query("UPDATE producto SET stock=".$cantidad." WHERE codigo='".$this->codigo."'");
-        while ($productos = $consulta->fetchObject()) {
-            $producto = new Producto($productos->codigo, $productos->nombre, $productos->descripcion, $productos->precio , $productos->stock, $productos->imagen, $productos->tipo);
-        }
-        return $producto;
+        $modificado = "UPDATE producto SET stock='".$cantidad."' WHERE codigo='".$this->codigo."'";
+        $conexion->exec($modificado);
     }
 
     public static function getProductoByCodigo($codigo){

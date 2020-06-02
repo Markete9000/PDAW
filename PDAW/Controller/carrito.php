@@ -1,13 +1,13 @@
 <?php
     session_start();
+    if (!isset($_SESSION['usuario'])) {
+        header("Location: ../Controller/index.php");
+    }
     include '../Model/Carrito.php';
     include '../Model/Producto.php';
 
-    if (!Carrito::existeCarrito($_SESSION['usuario'])) {
+    if (Carrito::existeCarrito($_SESSION['usuario'])) {
         
-        // Para cuando no haya carrito
-
-    }else{
         $carrito = Carrito::getCarritoByUsuario($_SESSION['usuario']);
         $productos = explode(';', $carrito->getProductos());
         foreach ($productos as $producto) {
@@ -20,12 +20,18 @@
         $data['productos'] = [];
         $cantidades;
         foreach ($array as $codigo => $cantidad) {
-            $data['productos'][] = Producto::getProductoByCodigo($codigo);
-            $cantidades[] = $cantidad;
+            $producto = Producto::getProductoByCodigo($codigo);
+            $data['productos'][] = $producto;
+            if ($producto->getStock() >= $cantidad) {
+                $cantidades[] = $cantidad;
+            }else{
+                $cantidad =$producto->getStock();
+                $cantidades[] = $cantidad;
+            }
             $totalAPagar += Producto::getProductoByCodigo($codigo)->getPrecio() * $cantidad;
         }
+
     }
     
-
     include '../View/carrito.php';
 ?>
