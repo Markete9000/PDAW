@@ -159,6 +159,7 @@ a{
     border: 1px solid #FF6000;
     background: white;
     color: #FF6000;
+    cursor: pointer;
 }
 
 .info{
@@ -179,4 +180,5 @@ a{
     border: 1px solid rgb(91, 158, 180);
     background: white;
     color: rgb(91, 158, 180);
+    cursor: pointer;
 }

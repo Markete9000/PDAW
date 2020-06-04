@@ -47,7 +47,7 @@ class Pedido{
     }
 
     public function getFecha(){
-        return $this->fecha;
+        return date('d/m/Y', strtotime($this->fecha));
     }
     public function setFecha($fecha){
         $this->fecha = $fecha;
@@ -72,6 +72,24 @@ class Pedido{
         $conexion->exec($modificado);
     }
 
+    public static function getPedidosByUsuario($usuario){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM pedido WHERE usuario='".$usuario."'");
+        $data['pedidos'] = [];
+        while ($pedidos = $consulta->fetchObject()) {
+            $data['pedidos'][] = new Pedido($pedidos->id, $pedidos->usuario, $pedidos->productos, $pedidos->precio, $pedidos->fecha);
+        }
+        return $data['pedidos'];
+    }
 
+    public static function getPedidoById($id){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM pedido WHERE id='".$id."'");
+        $pedido = "";
+        while ($pedidos = $consulta->fetchObject()) {
+            $pedido = new Pedido($pedidos->id, $pedidos->usuario, $pedidos->productos, $pedidos->precio, $pedidos->fecha);
+        }
+        return $pedido;
+    }
 
 }

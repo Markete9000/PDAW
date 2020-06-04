@@ -14,7 +14,8 @@
         $usuario = new Usuario($nombre, $usuario, $contraseña, $email, $direccion, $telefono, $tipo);
         $usuario->update($_POST['userAModificar']);
     }else{
-        $usuario = new Usuario($nombre, $usuario, $contraseña, $email, $direccion, $telefono);
+        $aux = Usuario::getUsuarioByUsuario($_SESSION['usuario']);
+        $usuario = new Usuario($nombre, $usuario, $contraseña, $email, $direccion, $telefono, $aux->getTipo());
         $usuario->update($_SESSION['usuario']);
     }
 

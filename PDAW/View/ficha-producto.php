@@ -26,17 +26,17 @@
             <div class="caja-informacion">
 
                 <div class="titulo">
-                    <?php echo $producto->getNombre() ?>
+                    <h3><?php echo $producto->getNombre() ?></h3>
                 </div>
 
                 <div class="descripcion">
-                    <?php echo $producto->getDescripcion() ?>
+                    <h4 class="sinnegrita"><?php echo $producto->getDescripcion() ?></h4>
                 </div>
 
                 <div class="compra">
 
                     <div class="precio">
-                        <?php echo $producto->getPrecio() ?>€
+                        <h3><?php echo $producto->getPrecio() ?>€</h3>
                     </div>
                     <div class="boton">
                         <form action="../Controller/añadir_carrito.php" method="post">

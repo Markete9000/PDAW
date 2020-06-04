@@ -22,11 +22,11 @@
 			<div class="menu">
 
 				<div class="pedidos">
-					<a class="boton" href="../Controller/pedidos_personales.php">Pedidos</a>
+					<a class="boton" href="../Controller/pedidos_usuario.php">Pedidos</a>
 				</div>
 				
 				<div class="incidencias">
-					<a class="boton" href="../Controller/incidencias_personales.php">Incidencias</a>
+					<a class="boton" href="../Controller/incidencias_usuario.php">Incidencias</a>
 				</div>
 
 				<div class="cerrar">

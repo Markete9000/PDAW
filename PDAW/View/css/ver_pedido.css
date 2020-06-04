@@ -1,0 +1,92 @@
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pedido{
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+    min-width: 500px;
+}
+
+.h2{
+    font-size: 35px;
+    background: #2f3640;
+    border-radius: 5px;
+    color: white;
+}
+
+.producto{
+    border-top: 2px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cajaimagen{
+    width: 25%;
+    min-width: 150px;
+}
+
+.imagen{
+    width: 190px;
+    height: 200px;
+}
+
+.cajainfo{
+    width: 50%;
+    min-width: 450px;
+}
+
+.cajaboton{
+    width: 25%;
+}
+
+.info{
+    width: 120px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgb(91, 158, 180);
+    background: rgb(91, 158, 180);
+    color: white;
+    font-size: 15px;
+    transition-duration: 300ms;
+}
+
+.info:hover{
+    font-weight: bold;
+    transition-duration: 300ms;
+    border-radius: 10px;
+    border: 1px solid rgb(91, 158, 180);
+    background: white;
+    color: rgb(91, 158, 180);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.nombre{
+    font-size: 23px;
+}
+
+.precio{
+    color: #FF6000;
+    font-size: 25px;
+    font-weight: bold;   
+}
+
+@media(max-width:1300px){
+    .producto{
+        min-height: 300px;
+    }
+}
+
+@media(max-width:1000px){
+    .producto{
+        min-height: 400px;
+    }
+}
