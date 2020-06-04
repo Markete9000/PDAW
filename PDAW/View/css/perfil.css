@@ -1,3 +1,163 @@
-.body{
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.caja{
+    margin: 0;
+    width: 60%;
+    height: 800px;
+    background: white;
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 600px;
+}
+
+.menu{
+    width: 13%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.info{
+    width: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titulo{
+    background: #2f3640;
+    color: #ddd;
+    height: 10%;
+    width: 100%;
+    border-left: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.cajainfo{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: lightcoral; */
+}
+
+.datos{
+    width: 100%;
+    height: 80%;
+    /* background: lightcoral; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.datos1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.datos2{
+    margin: auto;
+}
+
+.input{
+    width: inherit;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
     background: #EBECED;
+}
+
+.input:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.modi{
+    width: 200px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #FF6000;
+    background: #FF6000;
+    color: white;
+    font-size: 18px;
+    transition-duration: 300ms;
+    font-weight: bold;
+}
+
+.modi:hover{
+    font-weight: bold;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    border: 1px solid #FF6000;
+    background: white;
+    color: #FF6000;
+    font-size: 20px;
+    transition-duration: 300ms;
+    cursor: pointer;
+}
+
+.union{
+    display: flex;
+}
+
+.sinnegrita{
+    font-weight: lighter;
+}
+
+.boton{
+    color: #ddd;
+    font-size: 20px;
+}
+
+.pedidos, .incidencias{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2f3640;
+    display: flex;
+    align-items: center;
+    transition: 300ms;
+}
+
+.cerrar{
+    background: rgb(252, 48, 48);
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pedidos:hover, .incidencias:hover, .cerrar:hover{
+    background: #5b687a;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.cerrar:hover{
+    background: rgb(250, 75, 75);
+}
+
+@media(max-width:1400px){
+    .menu{
+        width: 20%;
+    }
+
+    .info{
+        width: 80%;
+    }
 }

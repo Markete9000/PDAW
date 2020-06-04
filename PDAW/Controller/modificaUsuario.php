@@ -1,17 +1,22 @@
 <?php
+    session_start();
     include '../Model/Usuario.php';
 
     $nombre = $_POST['nombre'];
     $usuario = $_POST['usuario'];
-    $contraseña = $_POST['contraseña'];
     $email = $_POST['email'];
+    $contraseña = $_POST['contraseña'];
     $direccion = $_POST['direccion'];
     $telefono = $_POST['telefono'];
-    $tipo = $_POST['tipo'];
 
-    $usuario = new Usuario($nombre, $usuario, $contraseña, $email, $direccion, $telefono , $tipo);
+    if (isset($_POST['tipo'])) {
+        $tipo = $_POST['tipo'];
+        $usuario = new Usuario($nombre, $usuario, $contraseña, $email, $direccion, $telefono, $tipo);
+        $usuario->update($_POST['userAModificar']);
+    }else{
+        $usuario = new Usuario($nombre, $usuario, $contraseña, $email, $direccion, $telefono);
+        $usuario->update($_SESSION['usuario']);
+    }
 
-    $usuario->update($_POST['userAModificar']);
-
-    header('Location: ../Controller/gestion_usuarios.php');
+    header('Location:' . getenv('HTTP_REFERER'));
 ?>

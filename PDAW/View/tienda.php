@@ -21,9 +21,6 @@
 
         <div class="contenedor-menu">
 
-            <!-- Este botón posteriormente quizá lo elimine -->
-            <!-- <a href="#" class="btn-menu">Productos <i class="icono fa fa-bars"></i></a> -->
-
             <ul class="menu">
 
                 <li><a>Componentes <i class="icono derecha fa fa-chevron-down"></i></a>
