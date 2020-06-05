@@ -1,0 +1,101 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.caja{
+    margin: 0;
+    width: 30%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 600px;
+}
+
+.titulo{
+    background: #2f3640;
+    color: #ddd;
+    height: 10%;
+    width: 100%;
+    border-left: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.incidencias{
+    width: 100%;
+}
+
+.incidencia{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-bottom: 2px solid lightgray;
+}
+
+.cajaboton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+
+.añadir{
+    width: 140px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgb(28, 204, 28);
+    background: rgb(28, 204, 28);
+    color: white;
+    font-size: 18px;
+    font-weight: bold; 
+    transition-duration: 300ms;
+}
+
+.añadir:hover{
+    font-weight: bold;
+    transition-duration: 300ms;
+    border-radius: 10px;
+    border: 1px solid rgb(28, 204, 28);
+    background: white;
+    font-size: 20px;  
+    color: rgb(28, 204, 28);
+    cursor: pointer;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.label{
+    margin-top: 10px;
+}
+
+.enviar{
+    text-align: center;
+    padding-top: 20px;
+}
+
+input{
+    width: inherit;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 20px;
+    background: #EBECED;
+}
+
+.tit{
+    font-size: 25px;
+    font-weight: bold;
+    color: #2f3640;
+}

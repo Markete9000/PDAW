@@ -31,18 +31,18 @@
                         echo '<div class="pedido">';
 
                             echo '<div class="caja1">';
-                                echo '<h3 class="h3">Id: </h3>'.$salto.'<h3 class="h3 sinnegrita">#'.$pedido->getId().'</h3>';
+                                echo '<h3 class="h3">Id: '.$salto.'</h3><h3 class="h3 sinnegrita">#'.$pedido->getId().'</h3>';
                             echo '</div>';
 
                             echo '<div class="caja2">';
-                                echo '<h3 class="h3">Fecha: </h3>'.$salto.'<h3 class="h3 sinnegrita">'.$pedido->getFecha().'</h3>';
+                                echo '<h3 class="h3">Fecha: '.$salto.'</h3><h3 class="h3 sinnegrita">'.$pedido->getFecha().'</h3>';
                             echo '</div>';
 
                             echo '<div class="caja3">';
-                                echo '<h3 class="h3">Precio: </h3>'.$salto.'<h3 class="h3 sinnegrita precio">'.$pedido->getPrecio().'</h3>';
+                                echo '<h3 class="h3">Factura: '.$salto.'</h3><h3 class="h3 sinnegrita precio">'.$pedido->getPrecio().'</h3>';
                             echo '</div>';
 
-                            echo '<div class="caja4">';
+                            echo '<div class="caja3">';
                                 echo '<form action="../Controller/ver_pedido.php" method="post">
                                 <input type="hidden" name="id" value="'.$pedido->getID().'">
                                 <input class="enviar" type="submit" value="Ver Pedido">
@@ -60,10 +60,6 @@
 	
     </div>
     
-                
-
-<!-- <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script type="text/javascript" src="../View/JS/perfil.js"></script> -->
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
 </html>

@@ -43,11 +43,13 @@
                             </form>';
                         echo '</div>';
     
-    
                     echo '</div>';
                     $i++;
                 }
-
+                echo '<div class="cajaprecio">
+                            <h1>Factura: &nbsp</h1>
+                            <h2 class="precio2">'.$pedido->getPrecio().'€</h2>
+                            </div>';
             }
             
             ?>

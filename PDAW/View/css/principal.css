@@ -17,6 +17,10 @@ h1:hover, h2:hover, h3:hover, h4:hover{
     cursor: default;
 }
 
+input:hover{
+    cursor: pointer;
+}
+
 .body{
     background: #EBECED;
 }

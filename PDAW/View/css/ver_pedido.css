@@ -21,7 +21,7 @@
 }
 
 .producto{
-    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,6 +77,19 @@
     color: #FF6000;
     font-size: 25px;
     font-weight: bold;   
+}
+
+.precio2{
+    color: #FF6000;
+    font-size: 30px;
+    font-weight: bold;  
+}
+
+.cajaprecio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
 }
 
 @media(max-width:1300px){

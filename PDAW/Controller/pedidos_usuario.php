@@ -6,7 +6,7 @@
 
     include '../Model/Pedido.php';
 
-    $salto = '&nbsp&nbsp&nbsp';
+    $salto = '&nbsp';
     $data['pedidos'] = Pedido::getPedidosByUsuario($_SESSION['usuario']);
 
     include '../View/pedidos_usuario.php';
