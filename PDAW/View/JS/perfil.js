@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    var cont = 0;
     
     $('.pedidos').click(function(){
         window.location.href = $('a', this).attr("href");
@@ -20,10 +22,17 @@ $(document).ready(function(){
         }
     });
 
+    // $('.contenedor').click(function(){
+    //     if (cont==0) {
+    //         $('.datos2').hide("linear");
+    //         cont = 1;
+    //     }else if (cont==1){
+    //         $('.datos2').show("linear");
+    //         cont = 0;
+    //     }
+    // });
+
 });
-
-
-
 
 // addEventListener('load',inicio);
 

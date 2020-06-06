@@ -1,0 +1,49 @@
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabla{
+    width: 70%;
+    text-align: center;
+}
+
+.titulo{
+    padding: 10px;
+    background: #2f3640;
+    color: #ddd;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.semititulo{
+    width: 100%;
+    padding: 10px;
+    background: #2f3640;
+    color: #ddd;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.texto{
+    padding: 20px;
+    background: #EBECED;
+    border-bottom: 1px solid lightgray;
+    font-size: 20px;
+}
+
+@media(max-width:1300px){
+    .incidencia{
+        min-height: 300px;
+    }
+}
+
+@media(max-width:1000px){
+    .incidencia{
+        min-height: 400px;
+    }
+}

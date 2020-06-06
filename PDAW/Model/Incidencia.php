@@ -82,4 +82,14 @@ class Incidencia{
         return $data['incidencias'];
     }
 
+    public static function getIncidenciaById($id){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM incidencia WHERE id='".$id."'");
+        $incidencia;
+        while ($incidencias = $consulta->fetchObject()) {
+            $incidencia = new Incidencia($incidencias->id, $incidencias->usuario, $incidencias->asunto, $incidencias->incidente, $incidencias->fecha);
+        }
+        return $incidencia;
+    }
+
 }

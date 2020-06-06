@@ -51,7 +51,7 @@
 							
 						<div class="datos1">
 							<h2>Usuario: &nbsp</h2>
-							<input class="input" name="usuario" type="text" readonly value="<?=$usuario->getUsuario()?>">
+							<input class="input" id="usuario" name="usuario" type="text" readonly value="<?=$usuario->getUsuario()?>">
 						</div>
 
 						<div class="datos1">

@@ -16,38 +16,72 @@
     ?>
 
 	<div class="contenedor">
-		<div class="caja">
-			<div class="titulo">
+		<div id="caja" class="caja">
+			<div id="titulo" class="titulo">
 				<h1>Incidencias</h1>
 			</div>
 
-			<div class="incidencias">
+			<div id="incidencias" name="incidencias" class="incidencias">
                 <?php
                 if (isset($data['incidencias'])) {
 
                     foreach ($data['incidencias'] as $incidencia) {
-                        echo '<div class="incidencia">';
+                        ?>
+                        <div id="incidencia" class="incidencia">
 
-                            echo '<div class="caja1">';
-                                echo '<h3 class="h3">Id: </h3>&nbsp&nbsp<h3 class="h3 sinnegrita">#'.$incidencia->getId().'</h3>';
-                            echo '</div>';
+                            <div class="caja1">
+                                <h3 class="h3">Id: &nbsp&nbsp</h3><h3 class="h3 sinnegrita">#<?=$incidencia->getId()?></h3>
+                            </div>
 
-                            echo '<div class="caja3">';
-                                echo '<h3 class="h3">Asunto: </h3>&nbsp<h3 class="h3 sinnegrita precio">'.$incidencia->getAsunto().'</h3>';
-                            echo '</div>';
+                            <div class="caja3">
+                                <h3 class="h3">Asunto: &nbsp</h3><h3 class="h3 sinnegrita precio"><?=$incidencia->getAsunto()?></h3>
+                            </div>
 
-                            echo '<div class="caja2">';
-                                echo '<h3 class="h3">Fecha: </h3>&nbsp<h3 class="h3 sinnegrita">'.$incidencia->getFecha().'</h3>';
-                            echo '</div>';
+                            <div class="caja2">
+                                <h3 class="h3">Fecha: &nbsp</h3><h3 class="h3 sinnegrita"><?=$incidencia->getFecha()?></h3>
+                            </div>
 
-                            echo '<div class="caja4">';
-                                echo '<form action="../Controller/ver_incidencia.php" method="post">
-                                <input type="hidden" name="id" value="'.$incidencia->getID().'">
-                                <input class="enviar" type="submit" value="Ver Incidencia">
-                                </form>';
-                            echo '</div>';
+                            <!-- <div>
+                                <a onclick="pop()" id="btn" class="btn">Show Box</a>
 
-                        echo '</div>';
+                                
+                            </div> -->
+                            
+
+                            <div>
+                                <form action="../Controller/ver_incidencia.php" method="post">
+                                    <input id="enviar" name="<?=$incidencia->getId()?>" class="enviar" type="button" value="Ver Incidencia">
+                                    <div id="box">
+                                        <div class="cajas">
+                                            <h2>Asunto: &nbsp&nbsp</h2>
+                                        </div>
+
+                                        <div id="cajasasunto" class="cajas¡">
+                                            <!-- <h3 id="asunto"></h3>  -->
+                                        </div>  
+
+                                        <div class="cajas">
+                                            <h2>Incidente: &nbsp&nbsp</h2>                                            
+                                        </div>  
+
+                                        <div id="cajasincidente" class="cajas">
+                                            <!-- <h3 id="incidente"></h3>  -->
+                                        </div> 
+
+                                        <a id="close" class="close">Close</a>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="caja4">
+                                <form action="../Controller/borraIncidencia.php" method="post">
+                                    <input type="hidden" name="id" value="<?=$incidencia->getId()?>">
+                                    <input class="eliminar" type="submit" value="Borrar">
+                                </form>
+                            </div>
+
+                        </div>
+                        <?php
                     }
 
                 }
@@ -63,7 +97,11 @@
 		</div>
 	
     </div>
+
+<script type="text/javascript">
     
+</script>
+<script type="text/javascript" src="../View/JS/ver_incidencia.js"></script>
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
 </html>
