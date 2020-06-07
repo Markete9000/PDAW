@@ -8,17 +8,19 @@ var boton, botonincidencia;
 var c = 0;
 
 function inicio(){
-    caja = document.getElementById("incidencias");
+    enviar = document.getElementById("enviar");
+    caja = document.getElementsByClassName('e');
     document.getElementById("close").addEventListener('click', cerrar);
-    incidencias = caja.children;
-    
-    for (let i = 0; i < incidencias.length; i++) {
-        botonincidencia = incidencias[i].firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.firstElementChild;
+    // incidencias = caja.children;
+    enviar.addEventListener('click', cargaIncidencia);
+
+    for (let i = 0; i < caja.length; i++) {
+        botonincidencia = caja[i].firstElementChild;
         botonincidencia.addEventListener("click", cargaIncidencia);
     }
 }
 
-function cargaIncidencia(){
+function cargaIncidencia(e){
     // location.reload();
     id = this.name;
     conexion1=new XMLHttpRequest();

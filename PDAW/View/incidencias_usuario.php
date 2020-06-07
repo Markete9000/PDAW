@@ -40,14 +40,7 @@
                             <div class="caja2">
                                 <h3 class="h3">Fecha: &nbsp</h3><h3 class="h3 sinnegrita"><?=$incidencia->getFecha()?></h3>
                             </div>
-
-                            <!-- <div>
-                                <a onclick="pop()" id="btn" class="btn">Show Box</a>
-
-                                
-                            </div> -->
                             
-
                             <div>
                                 <form action="../Controller/ver_incidencia.php" method="post">
                                     <input id="enviar" name="<?=$incidencia->getId()?>" class="enviar" type="button" value="Ver Incidencia">
@@ -56,17 +49,13 @@
                                             <h2>Asunto: &nbsp&nbsp</h2>
                                         </div>
 
-                                        <div id="cajasasunto" class="cajas¡">
-                                            <!-- <h3 id="asunto"></h3>  -->
-                                        </div>  
+                                        <div id="cajasasunto" class="cajas¡"></div>  
 
                                         <div class="cajas">
                                             <h2>Incidente: &nbsp&nbsp</h2>                                            
                                         </div>  
 
-                                        <div id="cajasincidente" class="cajas">
-                                            <!-- <h3 id="incidente"></h3>  -->
-                                        </div> 
+                                        <div id="cajasincidente" class="cajas"></div> 
 
                                         <a id="close" class="close">Close</a>
                                     </div>

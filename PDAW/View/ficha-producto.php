@@ -41,7 +41,7 @@
                     <div class="boton">
                         <form action="../Controller/añadir_carrito.php" method="post">
                             <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
-                            <input class="añadir" type="submit" value="Comprar">
+                            <input class="añadir" type="submit" value="Añadir Carrito">
                         </form>
                     </div>
                     

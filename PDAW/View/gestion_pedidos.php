@@ -18,31 +18,31 @@
     <div class="contenedor">
     
         <div class="formulario">
-            <form class="formulario" action="../Controller/gestion_productos.php" method="post">
-                <input class="filtro" type="text" name="filtro" placeholder="Filtrar por código o por nombre">
+            <form class="formulario" action="../Controller/gestion_pedidos.php" method="post">
+                <input class="filtro" type="text" name="filtro" placeholder="Filtrar por id o por usuario">
                 <input class="añadir filtrar" type="submit" value="Filtrar">
             </form>
         </div>
     
         <div class="caja_tabla primera">
             <table class="tabla">
-                <tr class="titulo"><td colspan="5"><h2>Gestión de los Productos de Ayo's</h2></td></tr>
-                <tr class="cabecera"><td>Código</td><td>Nombre</td><td>Tipo</td><td></td><td></td></tr>
+                <tr class="titulo"><td colspan="5"><h2>Gestión de los Pedidos de Ayo's</h2></td></tr>
+                <tr class="cabecera"><td>Id</td><td>Usuario</td><td>Fecha</td><td></td><td></td></tr>
                 <?php
-                    foreach ($data['productos'] as $producto) {
+                    foreach ($data['pedidos'] as $pedido) {
                         echo '<tr class="tr">';
-                        echo '<td class="td"><b>'.$producto->getCodigo().'</td>';
-                        echo '<td class="td">'.$producto->getNombre().'</td>';
-                        echo '<td class="td">'.$producto->getTipo().'</td>';
+                        echo '<td class="td"><b>'.$pedido->getId().'</td>';
+                        echo '<td class="td">'.$pedido->getUsuario().'</td>';
+                        echo '<td class="td">'.$pedido->getFecha().'</td>';
                         echo '<td class="td">
-                            <form action="../Controller/formProducto.php" method="post">
-                            <input type="hidden" name="codigo" value="'.$producto->getCodigo().'">
-                            <input class="modificar" type="submit" value="Modificar">
+                            <form action="../Controller/ver_pedido.php" method="post">
+                            <input type="hidden" name="id" value="'.$pedido->getId().'">
+                            <input class="añadir" type="submit" value="Ver Pedido">
                             </form>
                             </td>';
                         echo '<td class="td">
-                            <form action="../Controller/borraProducto.php" method="post">
-                            <input type="hidden" name="codigo" value="'.$producto->getCodigo().'">
+                            <form action="../Controller/borraPedido.php" method="post">
+                            <input type="hidden" name="id" value="'.$pedido->getId().'">
                             <input class="borrar" type="submit" value="Borrar">
                             </form>
                             </td>';
@@ -59,8 +59,8 @@
                 <tr>
                     <td>
                         <?php
-                            if ($_SESSION['limiteProductos'] >= 5) {
-                                echo '<form action="../Controller/gestion_productos.php" method="post">';
+                            if ($_SESSION['limitePedidos'] >= 5) {
+                                echo '<form action="../Controller/gestion_pedidos.php" method="post">';
                                 echo '<input type="hidden" name="anterior">';
                                 echo '<input class="limite" type="submit" value="Anterior">';
                                 echo '</form>';
@@ -70,8 +70,8 @@
                     <td></td>
                     <td>
                         <?php
-                            if ($_SESSION['limiteProductos'] <= $data['cantidad'] - 6) {
-                                echo '<form action="../Controller/gestion_productos.php" method="post">';
+                            if ($_SESSION['limitePedidos'] <= $data['cantidad'] - 6) {
+                                echo '<form action="../Controller/gestion_pedidos.php" method="post">';
                                 echo '<input type="hidden" name="siguiente">';
                                 echo '<input class="limite" type="submit" value="Siguiente">';
                                 echo '</form>';
@@ -80,12 +80,6 @@
                     </td>
                 </tr>
             </table>
-        </div>
-
-        <div class="boton">
-            <form action="../Controller/formProducto.php">
-                <input class="añadir boton" type="submit" value="Insertar Producto">
-            </form>
         </div>
 
     </div>

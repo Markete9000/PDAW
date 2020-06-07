@@ -12,8 +12,7 @@
 </head>  
 <body class="body">
 
-    <form class="formulario" action="../Controller/borraIncidencia.php" method="post">
-    
+    <div class="formulario">
         <h1>Confirmación de Borrado</h1>
         
         <div class="contenedor">
@@ -21,20 +20,19 @@
             <h3>¿Es seguro que desea borrar la incidencia?</h3>
 
             <div class="formularios">
-                <form action="../Controller/borraIncidencia.php" method="post">
+                <form action="../Controller/borraIncidenciaAdmin.php" method="post">
                     <input type="hidden" name="confirmacion">
                     <input type="hidden" name="id" value="<?=$id?>">
                     <input class="afirmacion" type="submit" value="Si">
                 </form>
 
-                <form action="../Controller/incidencias_usuario.php" method="post">
+                <form action="../Controller/gestion_incidencias.php" method="post">
                     <input class="borrar" type="submit" value="No">
                 </form>
             </div>
 
         </div>
-
-    </form>
-
+    </div>
+    
 </body>
 </html>

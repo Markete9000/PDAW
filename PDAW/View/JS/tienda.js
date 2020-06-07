@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+    var productos;
+    var caja_imagen;
+    var codigo;
+    productos = document.getElementById('productos').children;
+    for (let i = 0; i < productos.length; i++) {
+        caja_imagen = productos[i];
+        codigo = caja_imagen.firstElementChild.value;
+        caja_imagen.addEventListener('click', reenvio);
+    }
+
+    function reenvio(){
+        codigo = this.lastElementChild.firstElementChild.firstElementChild.value;
+        location.href = '../Controller/ficha-producto.php?codigo='+codigo;        
+    }
+
     $('.menu li:has(ul)').click(function(e){
         e.preventDefault();
         if ($(this).hasClass('activado')) {
@@ -11,10 +26,6 @@ $(document).ready(function(){
             $(this).addClass('activado');
             $(this).children('ul').slideDown();
         }
-    })
-
-    $('.menu li ul li a').click(function(){
-        window.location.href = $(this).attr("href");
     });
-
+    
 });

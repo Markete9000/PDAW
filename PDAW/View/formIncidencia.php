@@ -40,12 +40,6 @@
 
                 </form>
             </div>
-
-            <div class="cajaboton">
-                <form action="../Controller/añadir_incidencia" method="post">
-                    
-                </form>
-            </div>
 		</div>
     </div>
     

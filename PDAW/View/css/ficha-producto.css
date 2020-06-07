@@ -91,19 +91,17 @@
 }
 
 .añadir{
-    width: 90px;
-    height: 40px;
+    width: 120px;
+    height: 35px;
     border-radius: 3px;
     border: 1px solid #FF6000;
     background: #FF6000;
     color: white;
-    transition-duration: 400ms;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
+    transition-duration: 200ms;
 }
 
 .añadir:hover{
-    font-weight: bold;
     transition-duration: 500ms;
     border-radius: 10px;
     border: 1px solid #FF6000;
@@ -111,4 +109,5 @@
     color: #FF6000;
     cursor: pointer;
     font-size: 17px;
+    font-weight: bold;
 }

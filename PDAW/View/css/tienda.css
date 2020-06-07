@@ -48,7 +48,7 @@
 }
 
 .contenedor-menu .menu li a:hover{
-    background: #5b687a;
+    background: #535e6e;
 }
 
 .contenedor-menu .menu .icono{
@@ -67,6 +67,10 @@
 
 .contenedor-menu .menu ul li a{
     background: #738399;
+}
+
+.contenedor-menu .menu ul li a:hover{
+    background: #8495ad;
 }
 
 a{
@@ -103,6 +107,11 @@ a{
     -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.caja-imagen .titulo{
+    cursor: pointer;
 }
 
 .imagen{
@@ -142,24 +151,25 @@ a{
 }
 
 .añadir{
-    width: 70px;
-    height: 30px;
+    width: 120px;
+    height: 35px;
     border-radius: 3px;
     border: 1px solid #FF6000;
     background: #FF6000;
     color: white;
+    font-size: 15px;
     transition-duration: 200ms;
-    font-weight: bold;
 }
 
 .añadir:hover{
-    font-weight: bold;
     transition-duration: 500ms;
     border-radius: 10px;
     border: 1px solid #FF6000;
     background: white;
     color: #FF6000;
     cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .info{

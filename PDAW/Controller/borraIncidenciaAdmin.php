@@ -4,9 +4,9 @@
     if (isset($_POST['confirmacion'])) {
         $incidencia = Incidencia::getIncidenciaById($_POST['id']);
         $incidencia->delete();
-        header('Location: ../Controller/incidencias_usuario.php');
+        header('Location: ../Controller/gestion_incidencias.php');
     }else{
         $id = $_REQUEST['id'];
-        include '../View/confBorrInciUsuario.php';
+        include '../View/confBorrInciAdmin.php';
     }
 ?>

@@ -92,4 +92,31 @@ class Incidencia{
         return $incidencia;
     }
 
+    public static function getIncidenciasByFiltro($filtro){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM incidencia WHERE id LIKE '%".$filtro."%' OR usuario LIKE '%".$filtro."%'");
+        $data['incidencias'] = [];
+        while ($incidencias = $consulta->fetchObject()) {
+            $data['incidencias'][] = new Incidencia($incidencias->id, $incidencias->usuario, $incidencias->asunto, $incidencias->incidente, $incidencias->fecha);
+        }
+        return $data['incidencias'];
+    }
+
+    public static function getIncidenciasWithLimit($limite){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM incidencia LIMIT ".$limite.",5");
+        $data['incidencias'] = [];
+        while ($incidencias = $consulta->fetchObject()) {
+            $data['incidencias'][] = new Incidencia($incidencias->id, $incidencias->usuario, $incidencias->asunto, $incidencias->incidente, $incidencias->fecha);
+        }
+        return $data['incidencias'];
+    }
+
+    public static function getCantidadDeIncidencias(){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM incidencia");
+        $tamaño = $consulta->rowCount();
+        return $tamaño;
+    }
+
 }

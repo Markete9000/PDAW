@@ -92,4 +92,31 @@ class Pedido{
         return $pedido;
     }
 
+    public static function getPedidosByFiltro($filtro){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM pedido WHERE id LIKE '%".$filtro."%' OR usuario LIKE '%".$filtro."%'");
+        $data['pedidos'] = [];
+        while ($pedidos = $consulta->fetchObject()) {
+            $data['pedidos'][] = new Pedido($pedidos->id, $pedidos->usuario, $pedidos->productos, $pedidos->precio, $pedidos->fecha);
+        }
+        return $data['pedidos'];
+    }
+
+    public static function getPedidosWithLimit($limite){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM pedido LIMIT ".$limite.",5");
+        $data['pedidos'] = [];
+        while ($pedidos = $consulta->fetchObject()) {
+            $data['pedidos'][] = new Pedido($pedidos->id, $pedidos->usuario, $pedidos->productos, $pedidos->precio, $pedidos->fecha);
+        }
+        return $data['pedidos'];
+    }
+
+    public static function getCantidadDePedidos(){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM pedido");
+        $tamaño = $consulta->rowCount();
+        return $tamaño;
+    }
+
 }

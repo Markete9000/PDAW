@@ -60,25 +60,29 @@ td{
 }
 
 .añadir{
-    width: 140px;
+    width: 90px;
     height: 30px;
     border-radius: 3px;
     border: 1px solid rgb(28, 204, 28);
     background: rgb(28, 204, 28);
     color: white;
     font-size: 15px;  
-    transition-duration: 200ms;
+    transition-duration: 300ms;
 }
 
 .añadir:hover{
     font-weight: bold;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
     border-radius: 10px;
     border: 1px solid rgb(28, 204, 28);
     background: white;
     font-size: 16px;  
     color: rgb(28, 204, 28);
     cursor: pointer;
+}
+
+.segunda{
+    width: 110px;
 }
 
 .modificar{
@@ -89,12 +93,12 @@ td{
     background: orangered;
     color: white;
     font-size: 14px;    
-    transition-duration: 200ms;
+    transition-duration: 300ms;
 }
 
 .modificar:hover{
     font-weight: bold;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
     border-radius: 10px;
     border: 1px solid orangered;
     background: white;
@@ -111,12 +115,12 @@ td{
     background: rgb(241, 20, 20);
     color: white;
     font-size: 14px;
-    transition-duration: 200ms;
+    transition-duration: 300ms;
 }
 
 .borrar:hover{
     font-weight: bold;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
     border-radius: 10px;
     border: 1px solid rgb(241, 20, 20);
     background: white;
@@ -126,18 +130,19 @@ td{
 }
 
 .limite{
-    width: 85px;
+    width: 90px;
     height: 30px;
     border-radius: 3px;
     border: 1px solid rgb(72, 102, 238);
     background: rgb(72, 102, 238);
     font-size: 14px;
+    transition-duration: 300ms;
     color: white;
 }
 
 .limite:hover{
     font-weight: bold;
-    transition-duration: 500ms;
+    transition-duration: 300ms;
     border-radius: 10px;
     border: 1px solid rgb(72, 102, 238);
     background: white;
@@ -170,4 +175,64 @@ td{
 
 .filtrar{
     width: 60px;
+}
+
+/* CSS alert */
+
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e74c3c;
+    font-size: 20px;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+#box{
+    width: 700px;
+    min-height: 300px;
+    overflow: hidden;
+    background: #f1f1f1;
+    box-shadow: 0 0 20px black;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+
+#box span{
+    color: #2ecc71;
+    font-size: 40px;
+    display: block;
+    margin: 20px 0;
+}
+#box h1{
+    color: #333;
+}
+.cajas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+.contenido .asunto, .incidente{
+    width: 100%;
+}
+.close{
+    font-size: 20px;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #3498db;
+    display: inline-block;
+    border-radius: 4px;
+    margin-top: 20px;
 }

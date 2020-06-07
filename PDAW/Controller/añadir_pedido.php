@@ -46,7 +46,7 @@
 
     $usuario = Usuario::getUsuarioByUsuario($_SESSION['usuario']);
 
-    include '../Controller/enviar_correo.php';
+    include '../Controller/pedido_correo.php';
 
     // header('Location: ../Controller/enviar_correo.php');
 

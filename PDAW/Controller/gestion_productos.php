@@ -7,7 +7,6 @@
     include '../Model/Producto.php';
 
     if (isset($_POST['filtro'])) {
-        
         $data['productos'] = Producto::getProductosByFiltro($_POST['filtro']);
         $data['cantidad'] = 0;
 

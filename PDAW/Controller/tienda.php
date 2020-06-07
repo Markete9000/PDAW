@@ -9,7 +9,6 @@
     }else{
         $data['productos'] = Producto::getProductosByTipo($_GET['producto']);
     }
-    
     include "../View/tienda.php";
 ?>
 

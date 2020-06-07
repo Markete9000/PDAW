@@ -17,7 +17,7 @@
 
     <div class="contenedor">
         
-        <div class="productos">
+        <div class="caja">
             <div class="titulo">
                 <h2 class="h2">Gestión de Productos</h2>
             </div>
@@ -27,12 +27,32 @@
             </form>
         </div>
 
-        <div class="usuarios">
+        <div class="caja">
             <div class="titulo">
                 <h2 class="h2">Gestión de Usuarios</h2>
             </div>
             
             <form action="../Controller/gestion_usuarios.php">
+                <input class="gestion" type="submit" value="Gestionar">
+            </form>
+        </div>
+
+        <div class="caja">
+            <div class="titulo">
+                <h2 class="h2">Gestión de Pedidos</h2>
+            </div>
+            
+            <form action="../Controller/gestion_pedidos.php">
+                <input class="gestion" type="submit" value="Gestionar">
+            </form>
+        </div>
+
+        <div class="caja">
+            <div class="titulo">
+                <h2 class="h2">Gestión de Incidencias</h2>
+            </div>
+            
+            <form action="../Controller/gestion_incidencias.php">
                 <input class="gestion" type="submit" value="Gestionar">
             </form>
         </div>

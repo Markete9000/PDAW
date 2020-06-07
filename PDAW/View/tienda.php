@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../View/css/tienda.css">
     <link rel="stylesheet" href="../View/css/principal.css">
     <!-- El descoloque que sufría el header en la tienda era debido a Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
@@ -55,30 +55,31 @@
             </ul>
         </div>
 
-        <div class="productos">
+        <div id="productos" class="productos">
 
             <?php
             foreach ($data['productos'] as $producto) {
-                
-                echo '<div class="caja-imagen">';
+                ?>
+                <div id="caja-imagen" class="caja-imagen">
 
-                    echo '<img class="imagen" src="'.$producto->getImagen().'" alt="">';
-                    echo '<h4 class="titulo">'.$producto->getNombre().'</h4>';
-                    echo '<h3 class="precio">'.$producto->getPrecio().'€</h3>';
+                    <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
+                    <img class="imagen" src="<?=$producto->getImagen()?>" alt="">
+                    <h4 class="titulo"><?=$producto->getNombre()?></h4>
+                    <h3 class="precio"><?=$producto->getPrecio()?>€</h3>
 
-                    echo '<div class="botones">';
-                        echo '<form action="../Controller/ficha-producto.php" method="post">';
-                            echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
-                            echo '<input class="info" type="submit" value="Más Info">';
-                        echo '</form>';
-                        echo '<form action="../Controller/añadir_carrito.php" method="post">';
-                            echo '<input type="hidden" name="codigo" value="'.$producto->getCodigo().'">';
-                            echo '<input class="añadir" type="submit" value="Comprar">';
-                        echo '</form>';
-                    echo '</div>';
+                    <div class="botones">
+                        <!-- <form action="../Controller/ficha-producto.php" method="post">
+                            <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
+                            <input class="info" type="submit" value="Más Info">
+                        </form> -->
+                        <form action="../Controller/añadir_carrito.php" method="post">
+                            <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
+                            <input class="añadir" type="submit" value="Añadir Carrito">
+                        </form>
+                    </div>
                     
-                echo '</div>';
-
+                </div>
+                <?php
             }
             ?>
 
