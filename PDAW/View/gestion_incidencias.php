@@ -90,9 +90,6 @@
             </table>
         </div>
     </div>
-    <?php
-        include '../Controller/footer.php';
-    ?>
 <script type="text/javascript" src="../View/JS/ver_incidencia_admin.js"></script>
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
