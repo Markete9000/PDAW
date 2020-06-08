@@ -77,9 +77,6 @@
             </table>
         </div>
     </div>
-    <?php
-        include '../Controller/footer.php';
-    ?>
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
 </html>
