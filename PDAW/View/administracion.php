@@ -10,55 +10,43 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>  
 <body class="body">
-
     <?php
         include '../Controller/header.php';
     ?>
-
     <div class="contenedor">
-        
         <div class="caja">
             <div class="titulo">
                 <h2 class="h2">Gestión de Productos</h2>
             </div>
-            
             <form action="../Controller/gestion_productos.php">
                 <input class="gestion" type="submit" value="Gestionar">
             </form>
         </div>
-
         <div class="caja">
             <div class="titulo">
                 <h2 class="h2">Gestión de Usuarios</h2>
             </div>
-            
             <form action="../Controller/gestion_usuarios.php">
                 <input class="gestion" type="submit" value="Gestionar">
             </form>
         </div>
-
         <div class="caja">
             <div class="titulo">
                 <h2 class="h2">Gestión de Pedidos</h2>
             </div>
-            
             <form action="../Controller/gestion_pedidos.php">
                 <input class="gestion" type="submit" value="Gestionar">
             </form>
         </div>
-
         <div class="caja">
             <div class="titulo">
                 <h2 class="h2">Gestión de Incidencias</h2>
             </div>
-            
             <form action="../Controller/gestion_incidencias.php">
                 <input class="gestion" type="submit" value="Gestionar">
             </form>
         </div>
-
     </div>
-
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
 </html>

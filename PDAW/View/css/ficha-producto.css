@@ -12,11 +12,11 @@
 .producto{
     background: white;
     width: 60%;
+    min-width: 600px;
     height: auto;
     margin: auto;
     display: flex;
-    min-width: 400px;
-    min-height: 250px;
+    /* min-height: 250px; */
 }
 
 .caja-imagen{
@@ -44,7 +44,6 @@
     padding-top: 20px;
     height: auto;
     background: white;
-    /* line-height: 30px; */
     font-size: 25px;
     display: flex;
     align-items: center;
@@ -52,6 +51,7 @@
 }
 
 .descripcion{
+    width: 90%;
     padding-top: 7px;
     height: auto;
     background: white;
@@ -73,13 +73,16 @@
 
 .precio, .boton{
     width: 30%;
+    margin-bottom: 20px;
     /* background: lightslategrey; */
 }
 
 .precio{
     color: #FF6000;
     font-size: 35px;
-    font-weight: bold;   
+    font-weight: bold; 
+    display: flex;  
+    flex-wrap: wrap;
 }
 
 .precio::first-letter{
@@ -110,4 +113,22 @@
     cursor: pointer;
     font-size: 17px;
     font-weight: bold;
+}
+
+@media(max-width:1500px){
+    .producto{
+        width: 70%;
+    }
+
+    .caja-imagen{
+        display: none;
+    }
+
+    .caja-informacion{
+        width: 100%;
+    }
+    .producto{
+        min-width: 650px;
+        min-height: 30%;
+    }
 }

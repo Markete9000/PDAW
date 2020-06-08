@@ -11,11 +11,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>  
 <body class="body">
-
     <form class="formulario" action="../Controller/insertaUsuario.php" method="post">
-
         <h1>Registrate</h1>
-
         <?php
         if (isset($_GET['existeusuario'])) {
             echo '<div id="cookies" class="alert alert-info alert-dismissible fade show" role="alert">';
@@ -29,61 +26,42 @@
                     </button>
                 </div>';
         }
-        if (!isset($_GET['existeemail']) && !isset($_GET['existeusuario'])) {
-            echo '<div id="cookies" class="alert alert-info alert-dismissible fade show" role="alert">
-                    <strong>¡Antes de seguir!</strong> Debe saber que nuestra página hace uso de sus cookies.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>';
-        }
         ?>
         <div class="contenedor">
-        
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
                 <input type="text" placeholder="Nombre Completo" name="nombre" maxlength="50" required>
             </div>
-
             <div class="input-contenedor">
                 <i class="fas fa-tag icon"></i>
                 <input type="text" placeholder="Usuario" name="usuario"  maxlength="20" required>
             </div>
-
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
                 <input type="password" placeholder="Contraseña" maxlength="20" name="contraseña" required>
             </div>
-                
             <div class="input-contenedor">
                 <i class="fas fa-envelope icon"></i>
                 <input type="email" placeholder="Correo Electrónico" maxlength="40" name="email" required>
             </div>
-
             <div class="input-contenedor">
                 <i class="fas fa-home icon"></i>
                 <input type="text" placeholder="Dirección" maxlength="40" name="direccion" required>
             </div>
-
             <div class="input-contenedor">
                 <i class="fas fa-mobile icon"></i>
                 <input type="tel" placeholder="Teléfono" name="telefono" maxlength="9" minlength="9" required>
             </div>
-
             <ul class="ul">
-
                 <li>
                     <label class="label">Aceptar Políticas de Privacidad
                         <input type="checkbox" required>
                         <span class="check"></span>
                     </label>
                 </li>
-
             </ul>
-
             <input type="submit" value="Registrate" class="button">
             <p class="mt-4">¿Ya tienes una cuenta?<a class="link" href="../Controller/login.php">Iniciar Sesion</a></p>
-
         </div>
     </form>
 </body>

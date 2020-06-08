@@ -10,20 +10,16 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>  
 <body class="body">
-
     <?php
         include '../Controller/header.php';
     ?>
-
     <div class="contenedor">
-    
         <div class="formulario">
             <form class="formulario" action="../Controller/gestion_incidencias.php" method="post">
                 <input class="filtro" type="text" name="filtro" placeholder="Filtrar por id o por usuario">
                 <input class="añadir filtrar" type="submit" value="Filtrar">
             </form>
         </div>
-    
         <div class="caja_tabla primera">
             <table class="tabla">
                 <tr class="titulo"><td colspan="5"><h2>Gestión de las Incidencias de Ayo's</h2></td></tr>
@@ -35,9 +31,7 @@
                         <td class="td"><b><?=$incidencia->getId()?></td>
                         <td class="td"><?=$incidencia->getUsuario()?></td>
                         <td class="td"><?=$incidencia->getAsunto()?></td>
-                        
                         <td class="td">
-
                             <div>
                                 <form class="e" action="../Controller/ver_incidencia.php" method="post">
                                     <input id="enviar" name="<?=$incidencia->getId()?>" class="añadir segunda" type="button" value="Ver Incidencia">
@@ -45,20 +39,15 @@
                                         <div class="cajas">
                                             <h2>Asunto: &nbsp&nbsp</h2>
                                         </div>
-
                                         <div id="cajasasunto" class="cajas¡"></div>  
-
                                         <div class="cajas">
                                             <h2>Incidente: &nbsp&nbsp</h2>                                            
                                         </div>  
-
                                         <div id="cajasincidente" class="cajas"></div> 
-
                                         <a id="close" class="close">Close</a>
                                     </div>
                                 </form>
                             </div>
-
                         </td>
                         <td class="td">
                             <form action="../Controller/borraIncidenciaAdmin.php" method="post">
@@ -69,12 +58,10 @@
                         </tr>
                         <?php
                     }
-
                     echo '<tr><td></td> <td></td>';
                 ?>
             </table>
         </div>
-
         <div class="caja_tabla">
             <table class="tabla">
                 <tr>
@@ -102,9 +89,10 @@
                 </tr>
             </table>
         </div>
-
     </div>
-
+    <?php
+        include '../Controller/footer.php';
+    ?>
 <script type="text/javascript" src="../View/JS/ver_incidencia_admin.js"></script>
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>

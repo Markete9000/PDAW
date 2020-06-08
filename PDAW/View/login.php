@@ -13,7 +13,6 @@
 </head>  
 <body class="body">
     <form class="formulario" action="../Controller/logUsuario.php" method="post">
-    
         <h1>Login</h1>
         <?php
         if (isset($_GET['fallopass'])) {
@@ -30,22 +29,17 @@
         }
         ?>
         <div class="contenedor">
-
             <div class="input-contenedor">
                 <i class="fas fa-user icon"></i>
                 <input type="text" name="user" placeholder="Usuario">  
             </div>
-            
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
                 <input type="password" name="pass" placeholder="Contraseña">
             </div>
-
             <input type="submit" value="Login" class="button">
             <p class="mt-4">¿No tienes una cuenta? <a class="link" href="../Controller/register.php">Registrate</a></p>
-
         </div>
-
     </form>
 </body>
 </html>

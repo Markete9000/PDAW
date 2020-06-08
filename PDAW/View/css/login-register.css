@@ -55,9 +55,11 @@ input:hover{
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: 300ms;
 }
 .button:hover{
     background: cadetblue;
+    transition: 300ms;
 }
 p{
     text-align: center;
@@ -66,10 +68,12 @@ p{
     text-decoration: none;
     color: #1a2537;
     font-weight: 600;
+    transition: 300ms;
 }
 .link:hover{
      color: cadetblue;
      text-decoration: none;
+     transition: 300ms;
 }
 @media(min-width:768px)
 {

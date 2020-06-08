@@ -11,11 +11,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>  
 <body class="body">
-
     <form class="formulario" action="../Controller/insertaProducto.php" method="post" enctype="multipart/form-data">
-    
         <h1>Producto Nuevo</h1>
-
         <?php
         if (isset($_GET['insertado'])) {
             echo '<div id="cookies" class="alert alert-info alert-dismissible fade show" role="alert">
@@ -24,30 +21,23 @@
                 </div>';
         }
         ?>
-        
         <div class="contenedor">
-
             <div class="input-contenedor">
                 <input type="text" name="nombre" placeholder="Nombre" maxlength="90">  
             </div>
-            
             <div class="input-contenedor">
                 <input type="text" name="descripcion" placeholder="Descripción">
             </div>
-
             <div class="input-contenedor">
                 <input type="text" name="precio" placeholder="Precio">
             </div>
-
             <div class="input-contenedor">
                 <input type="number" name="stock" placeholder="Stock">
             </div>
-
             <h5>Imagen de producto</h5>
             <div class="input-contenedor input-imagen">
                 <input type="file" class="archivo" name="imagen" id="imagen">
             </div>
-
             <h5>Tipo de producto</h5>
             <div class="input-contenedor" id="ejemplo">
                 <select name="tipo" class="select">
@@ -67,12 +57,8 @@
                     <option value="Movil mayores">Móvil para Mayores</option>
                 </select>
             </div>
-
             <input type="submit" value="Añadir" class="button">
-
         </div>
-
     </form>
-
 </body>
 </html>

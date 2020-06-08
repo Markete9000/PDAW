@@ -12,30 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body class="body">
-    
     <?php
         include '../Controller/header.php';
     ?>
-
     <div class="contenedor">
-
         <div class="contenedor-menu">
-
             <ul class="menu">
-
                 <li><a>Componentes <i class="icono derecha fa fa-chevron-down"></i></a>
                     <ul>
                         <li><a href="../Controller/tienda.php?producto=placa base">Placas Base</a></li>
                         <li><a href="../Controller/tienda.php?producto=procesador">Procesadores</a></li>
-                        <li><a href="../Controller/tienda.php?producto=disco duro">Discos Duros</a></li>
                         <li><a href="../Controller/tienda.php?producto=tarjeta grafica">Tarjetas Gráficas</a></li>
-                        <li><a href="../Controller/tienda.php?producto=memoria ram">Memorias RAM</a></li>
                         <li><a href="../Controller/tienda.php?producto=torre">Torres</a></li>
-                        <li><a href="../Controller/tienda.php?producto=ventilacion">Ventilación</a></li>
-                        <li><a href="../Controller/tienda.php?producto=fuente de alimentacion">Fuentes de alimentación</a></li>
                     </ul>
                 </li>
-
                 <li><a>Periféricos <i class="icono derecha fa fa-chevron-down"></i></a>
                     <ul>
                         <li><a href="../Controller/tienda.php?producto=monitor">Monitores</a></li>
@@ -43,7 +33,6 @@
                         <li><a href="../Controller/tienda.php?producto=raton">Ratones</a></li>
                     </ul>
                 </li>
-
                 <li><a>Smartphones / Telefonía<i class="icono derecha fa fa-chevron-down"></i></a>
                     <ul>
                         <li><a href="../Controller/tienda.php?producto=smartphone">Smartphones</a></li>
@@ -51,42 +40,32 @@
                         <li><a href="../Controller/tienda.php?producto=movil mayores">Móviles para mayores</a></li>
                     </ul>
                 </li>
-
             </ul>
         </div>
-
         <div id="productos" class="productos">
-
             <?php
             foreach ($data['productos'] as $producto) {
                 ?>
                 <div id="caja-imagen" class="caja-imagen">
-
                     <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
                     <img class="imagen" src="<?=$producto->getImagen()?>" alt="">
                     <h4 class="titulo"><?=$producto->getNombre()?></h4>
                     <h3 class="precio"><?=$producto->getPrecio()?>€</h3>
-
                     <div class="botones">
-                        <!-- <form action="../Controller/ficha-producto.php" method="post">
-                            <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
-                            <input class="info" type="submit" value="Más Info">
-                        </form> -->
                         <form action="../Controller/añadir_carrito.php" method="post">
                             <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
                             <input class="añadir" type="submit" value="Añadir Carrito">
                         </form>
                     </div>
-                    
                 </div>
                 <?php
             }
             ?>
-
         </div>
-
     </div>
-
+    <?php
+        include '../Controller/footer.php';
+    ?>
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="../View/JS/tienda.js"></script>
     <script src="../View/JS/principal.js"></script>

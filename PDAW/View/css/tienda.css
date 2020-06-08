@@ -122,9 +122,10 @@ a{
 .productos{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     width: 85%;
     padding-top: 30px;
+    margin-left: 50px;
     /* background: lightblue; */
 }
 
@@ -192,3 +193,4 @@ a{
     color: rgb(91, 158, 180);
     cursor: pointer;
 }
+

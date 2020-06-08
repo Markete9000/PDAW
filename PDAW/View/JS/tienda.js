@@ -6,7 +6,6 @@ $(document).ready(function(){
     productos = document.getElementById('productos').children;
     for (let i = 0; i < productos.length; i++) {
         caja_imagen = productos[i];
-        codigo = caja_imagen.firstElementChild.value;
         caja_imagen.addEventListener('click', reenvio);
     }
 

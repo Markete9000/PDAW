@@ -161,6 +161,24 @@ class Producto{
         return $tamaño;
     }
 
+    public static function getProductosRandom(){
+        $conexion = ayoDB::connectDB();
+        $consulta = $conexion->query("SELECT * FROM producto");
+        $tamaño = $consulta->rowCount();
+        $rand = rand(0, $tamaño-5);
+        $data['productos'] = [];
+        $arrayNumeros = [];
+        $vuelta = 0;
+        $data['productosFinales'] = [];
+        while ($productos = $consulta->fetchObject()) {
+            $data['productos'][] = new Producto($productos->codigo, $productos->nombre, $productos->descripcion, $productos->precio, $productos->stock, $productos->imagen, $productos->tipo);
+        }
+        for ($i=0; $i < 5; $i++) { 
+            $data['productosFinales'][] = $data['productos'][$rand+$i];
+        }
+        return $data['productosFinales'];
+    }
+
 }
 
 ?>

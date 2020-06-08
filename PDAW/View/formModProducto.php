@@ -11,31 +11,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>  
 <body class="body">
-
     <form class="formulario" action="../Controller/modificaProducto.php" method="post">
-    
         <h1>Producto a Modificar</h1>
-        
         <div class="contenedor">
-
             <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
-
             <div class="input-contenedor">
                 <input type="text" name="nombre" value="<?=$producto->getNombre()?>" maxlength="90">  
             </div>
-            
             <div class="input-contenedor">
                 <input type="text" name="descripcion" value="<?=$producto->getDescripcion()?>">
             </div>
-
             <div class="input-contenedor">
                 <input type="text" name="precio" value="<?=$producto->getPrecio()?>">
             </div>
-
             <div class="input-contenedor">
                 <input type="number" name="stock" value="<?=$producto->getStock()?>">
             </div>
-
             <h5>Tipo de producto</h5>
             <div class="input-contenedor" id="ejemplo">
                 <select name="tipo" class="select">
@@ -55,12 +46,8 @@
                     <option value="Movil mayores">Móvil para Mayores</option>
                 </select>
             </div>
-
             <input type="submit" value="Modificar" class="button">
-
         </div>
-
     </form>
-
 </body>
 </html>

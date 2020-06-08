@@ -10,20 +10,16 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>  
 <body class="body">
-
     <?php
         include '../Controller/header.php';
     ?>
-
     <div class="contenedor">
-    
         <div class="formulario">
             <form class="formulario" action="../Controller/gestion_pedidos.php" method="post">
                 <input class="filtro" type="text" name="filtro" placeholder="Filtrar por id o por usuario">
                 <input class="añadir filtrar" type="submit" value="Filtrar">
             </form>
         </div>
-    
         <div class="caja_tabla primera">
             <table class="tabla">
                 <tr class="titulo"><td colspan="5"><h2>Gestión de los Pedidos de Ayo's</h2></td></tr>
@@ -53,7 +49,6 @@
                 ?>
             </table>
         </div>
-
         <div class="caja_tabla">
             <table class="tabla">
                 <tr>
@@ -81,9 +76,10 @@
                 </tr>
             </table>
         </div>
-
     </div>
-
+    <?php
+        include '../Controller/footer.php';
+    ?>
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>
 </html>
