@@ -78,7 +78,7 @@
         </div>
         <div class="boton">
             <form action="../Controller/formProducto.php">
-                <input class="añadir boton" type="submit" value="Insertar Producto">
+                <input class="añadir elementoboton" type="submit" value="Insertar Producto">
             </form>
         </div>
     </div>

@@ -13,7 +13,7 @@
 </head>  
 <body class="body">
     <form class="formulario" action="../Controller/logUsuario.php" method="post">
-        <h1>Login</h1>
+        <h1>Inicio de Sesión</h1>
         <?php
         if (isset($_GET['fallopass'])) {
             echo '<div id="cookies" class="alert alert-info alert-dismissible fade show" role="alert">

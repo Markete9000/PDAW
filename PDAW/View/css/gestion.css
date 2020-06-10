@@ -155,6 +155,10 @@ td{
     text-align: center;
 }
 
+.elementoboton{
+    width: 140px;
+}
+
 .formulario{
     margin: 0;
 }
