@@ -82,8 +82,12 @@ input:hover{
     color: #5f27cd;
 }
 
-.contact{
+.btncarrito{
     color: #1dd1a1;
+}
+
+.quest{
+    color: rgb(235, 235, 64);
 }
 
 .menu-toggle-btn{

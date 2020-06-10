@@ -14,7 +14,35 @@
         include '../Controller/header.php';
     ?>
     <div class="contenedor">
-        <div class="caja">
+
+        <table class="tabla">
+            <tr> <td class="cabeza" colspan="4">Administración</td> </tr>
+            <tr> <td class="cabeza dos">Productos</td><td class="cabeza dos">Usuarios</td><td class="cabeza dos">Pedidos</td><td class="cabeza dos">Incidencias</td> </tr>
+            <tr> 
+                <td class="elemento">
+                    <form class="form" action="../Controller/gestion_productos.php">
+                        <input class="gestion" type="submit" value="Gestionar">
+                    </form>
+                </td>
+                <td class="elemento">
+                    <form class="form" action="../Controller/gestion_usuarios.php">
+                        <input class="gestion" type="submit" value="Gestionar">
+                    </form>
+                </td>
+                <td class="elemento">
+                    <form class="form" action="../Controller/gestion_pedidos.php">
+                        <input class="gestion" type="submit" value="Gestionar">
+                    </form>
+                </td>
+                <td class="elemento">
+                    <form class="form" action="../Controller/gestion_incidencias.php">
+                        <input class="gestion" type="submit" value="Gestionar">
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <!-- <div class="caja">
             <div class="titulo">
                 <h2 class="h2">Gestión de Productos</h2>
             </div>
@@ -45,7 +73,7 @@
             <form action="../Controller/gestion_incidencias.php">
                 <input class="gestion" type="submit" value="Gestionar">
             </form>
-        </div>
+        </div> -->
     </div>
 <script type="text/javascript" src="../View/JS/principal.js"></script>
 </body>

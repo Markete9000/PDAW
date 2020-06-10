@@ -52,7 +52,7 @@
                 echo '</div>';
             }else{
                 echo '<div class="vacio">
-                    <h2>Tiene el carrito vacío, ¡¡Vaya a la tienda y añada algo a él!!</h2>
+                    <h1>Tienes el carrito vacío, ¡¡Vaya a la tienda y añada algo a él!!</h1>
                     </div>';
             }
             ?>
