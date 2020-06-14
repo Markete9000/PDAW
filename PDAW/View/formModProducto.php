@@ -36,18 +36,12 @@
                 <select name="tipo" class="select">
                     <option value="Placa base">Placa Base</option>
                     <option value="Procesador">Procesador</option>
-                    <option value="Disco duro">Disco Duro</option>
                     <option value="Tarjeta grafica">Tarjeta Gráfica</option>
-                    <option value="Memoria ram">Memoria RAM</option>
-                    <option value="Torre">Torre</option>
-                    <option value="Ventilacion">Ventilación</option>
-                    <option value="Fuente de alimentacion">Fuente de Alimentación</option>
                     <option value="Monitor">Monitor</option>
                     <option value="Teclado">Teclado</option>
                     <option value="Raton">Ratón</option>
                     <option value="Smartphone">Smartphone</option>
                     <option value="Movil basico">Móvil Básico</option>
-                    <option value="Movil mayores">Móvil para Mayores</option>
                 </select>
             </div>
             <input type="submit" value="Modificar" class="button">
