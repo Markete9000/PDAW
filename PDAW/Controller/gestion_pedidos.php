@@ -9,6 +9,7 @@
     if (isset($_POST['filtro'])) {
         $data['pedidos'] = Pedido::getPedidosByFiltro($_POST['filtro']);
         $data['cantidad'] = 0;
+        $_SESSION['limitePedidos'] = 0;
 
     }else{
 

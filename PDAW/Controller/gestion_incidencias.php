@@ -9,6 +9,7 @@
     if (isset($_POST['filtro'])) {
         $data['incidencias'] = Incidencia::getIncidenciasByFiltro($_POST['filtro']);
         $data['cantidad'] = 0;
+        $_SESSION['limiteIncidencias'] = 0;
 
     }else{
 

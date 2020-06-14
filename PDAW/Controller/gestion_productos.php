@@ -9,6 +9,7 @@
     if (isset($_POST['filtro'])) {
         $data['productos'] = Producto::getProductosByFiltro($_POST['filtro']);
         $data['cantidad'] = 0;
+        $_SESSION['limiteProductos'] = 0;
 
     }else{
 

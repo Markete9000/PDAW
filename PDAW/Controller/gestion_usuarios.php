@@ -10,6 +10,7 @@
         
         $data['usuarios'] = Usuario::getUsuariosByFiltro($_POST['filtro']);
         $data['cantidad'] = 0;
+        $_SESSION['limiteUsuarios'] = 0;
 
     }else{
 

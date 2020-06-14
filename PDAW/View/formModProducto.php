@@ -15,15 +15,19 @@
         <h1>Producto a Modificar</h1>
         <div class="contenedor">
             <input type="hidden" name="codigo" value="<?=$producto->getCodigo()?>">
+            <h5>Nombre</h5>
             <div class="input-contenedor">
                 <input type="text" name="nombre" value="<?=$producto->getNombre()?>" maxlength="90">  
             </div>
+            <h5>Descripción</h5>
             <div class="input-contenedor">
                 <input type="text" name="descripcion" value="<?=$producto->getDescripcion()?>">
             </div>
+            <h5>Precio</h5>
             <div class="input-contenedor">
                 <input type="text" name="precio" value="<?=$producto->getPrecio()?>">
             </div>
+            <h5>Stock</h5>
             <div class="input-contenedor">
                 <input type="number" name="stock" value="<?=$producto->getStock()?>">
             </div>

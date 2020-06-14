@@ -61,9 +61,6 @@
             ?>
         </div>
     </div>
-    <?php
-        include '../Controller/footer.php';
-    ?>
     <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="../View/JS/tienda.js"></script>
     <script src="../View/JS/principal.js"></script>
