@@ -23,7 +23,6 @@
                         <li><a href="../Controller/tienda.php?producto=placa base">Placas Base</a></li>
                         <li><a href="../Controller/tienda.php?producto=procesador">Procesadores</a></li>
                         <li><a href="../Controller/tienda.php?producto=tarjeta grafica">Tarjetas Gráficas</a></li>
-                        <li><a href="../Controller/tienda.php?producto=torre">Torres</a></li>
                     </ul>
                 </li>
                 <li><a>Periféricos <i class="icono derecha fa fa-chevron-down"></i></a>
@@ -37,7 +36,6 @@
                     <ul>
                         <li><a href="../Controller/tienda.php?producto=smartphone">Smartphones</a></li>
                         <li><a href="../Controller/tienda.php?producto=movil basico">Móviles Básicos</a></li>
-                        <li><a href="../Controller/tienda.php?producto=movil mayores">Móviles para mayores</a></li>
                     </ul>
                 </li>
             </ul>

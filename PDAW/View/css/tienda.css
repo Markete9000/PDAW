@@ -125,6 +125,7 @@ a{
     justify-content: start;
     width: 85%;
     padding-top: 30px;
+    padding-bottom: 30px;
     margin-left: 50px;
     /* background: lightblue; */
 }
