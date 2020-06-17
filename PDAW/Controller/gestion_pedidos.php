@@ -7,10 +7,14 @@
     include '../Model/Pedido.php';
 
     if (isset($_POST['filtro'])) {
-        $data['pedidos'] = Pedido::getPedidosByFiltro($_POST['filtro']);
-        $data['cantidad'] = 0;
-        $_SESSION['limitePedidos'] = 0;
-
+        if ($_POST['filtro'] == "") {
+            $_SESSION['limitePedidos'] = 0;
+            $data['pedidos'] = Pedido::getPedidosWithLimit($_SESSION['limitePedidos']);
+            $data['cantidad'] = Pedido::getCantidadDePedidos();
+        }else{
+            $data['pedidos'] = Pedido::getPedidosByFiltro($_POST['filtro']);
+            $data['cantidad'] = Pedido::getCantidadDePedidos();
+        }
     }else{
 
         if (!isset($_SESSION['limitePedidos'])) {

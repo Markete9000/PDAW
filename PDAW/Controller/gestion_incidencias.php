@@ -7,10 +7,14 @@
     include '../Model/Incidencia.php';
 
     if (isset($_POST['filtro'])) {
-        $data['incidencias'] = Incidencia::getIncidenciasByFiltro($_POST['filtro']);
-        $data['cantidad'] = 0;
-        $_SESSION['limiteIncidencias'] = 0;
-
+        if ($_POST['filtro'] == "") {
+            $_SESSION['limiteIncidencias'] = 0;
+            $data['incidencias'] = Incidencia::getIncidenciasWithLimit($_SESSION['limiteIncidencias']);
+            $data['cantidad'] = Incidencia::getCantidadDeIncidencias();
+        }else{
+            $data['incidencias'] = Incidencia::getIncidenciasByFiltro($_POST['filtro']);
+            $data['cantidad'] = Incidencia::getCantidadDeIncidencias();
+        }
     }else{
 
         if (!isset($_SESSION['limiteIncidencias'])) {

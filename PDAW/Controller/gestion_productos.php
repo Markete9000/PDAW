@@ -7,9 +7,15 @@
     include '../Model/Producto.php';
 
     if (isset($_POST['filtro'])) {
-        $data['productos'] = Producto::getProductosByFiltro($_POST['filtro']);
-        $data['cantidad'] = 0;
-        $_SESSION['limiteProductos'] = 0;
+        
+        if ($_POST['filtro'] == "") {
+            $_SESSION['limiteProductos'] = 0;
+            $data['productos'] = Producto::getProductosWithLimit($_SESSION['limiteProductos']);
+            $data['cantidad'] = Producto::getCantidadDeProductos();
+        }else{
+            $data['productos'] = Producto::getProductosByFiltro($_POST['filtro']);
+            $data['cantidad'] = Producto::getCantidadDeProductos();
+        }
 
     }else{
 
